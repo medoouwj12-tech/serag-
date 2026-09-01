@@ -8,22 +8,22 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/luxury-theme.css" />
 </head>
-<body class="bg-slate-900 text-slate-100 min-h-screen">
+<body class="bg-[#0A192F] text-slate-100 min-h-screen">
 
   <!-- Header -->
-  <header class="bg-[#001424] border-b border-amber-500/20 px-6 py-4 flex items-center justify-between sticky top-0 z-40">
+  <header class="bg-[#001428] border-b border-white/10 px-6 py-4 flex items-center justify-between sticky top-0 z-40">
     <div class="flex items-center gap-3">
-      <div class="w-10 h-10 rounded-full overflow-hidden border border-amber-400 p-0.5 bg-slate-950">
+      <div class="w-10 h-10 rounded-full overflow-hidden border border-white p-0.5 bg-[#001428]">
         <img src="logo.jpeg" alt="Logo" class="w-full h-full object-cover rounded-full" />
       </div>
       <div>
         <h1 class="font-heading font-bold text-base text-white tracking-wider">SERAG FRAGRANCES</h1>
-        <span class="text-xs text-amber-400 font-bold font-arabic block -mt-1">لوحة التحكم وإدارة الكتالوج</span>
+        <span class="text-xs text-white font-bold font-arabic block -mt-1">لوحة التحكم وإدارة الكتالوج</span>
       </div>
     </div>
 
     <div class="flex items-center gap-3">
-      <a href="index.html" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-200 flex items-center gap-1.5 transition">
+      <a href="index.html" class="px-4 py-2 rounded-xl bg-[#0A192F] hover:bg-slate-700 text-xs font-bold text-slate-200 flex items-center gap-1.5 transition">
         <span>🏪</span>
         <span>العودة للمتجر</span>
       </a>
@@ -34,22 +34,22 @@
   </header>
 
   <!-- Lock Screen (Authentication) -->
-  <div id="admin-lock-screen" class="max-w-md mx-auto mt-20 p-8 rounded-3xl bg-[#001B30] border border-amber-400/30 text-center shadow-2xl">
-    <div class="w-16 h-16 rounded-full bg-amber-400/20 text-amber-400 text-2xl flex items-center justify-center mx-auto mb-4 border border-amber-400/40">
+  <div id="admin-lock-screen" class="max-w-md mx-auto mt-20 p-8 rounded-3xl bg-[#001428] border border-white/30 text-center shadow-2xl">
+    <div class="w-16 h-16 rounded-full bg-white/10 text-white text-2xl flex items-center justify-center mx-auto mb-4 border border-white/40">
       🔒
     </div>
     <h2 class="text-2xl font-bold text-white mb-2">تسجيل دخول لوحة التحكم</h2>
     <p class="text-xs text-slate-400 mb-6">أدخل رمز المرور السري الخاص بإدارة متجر سراج للعطور</p>
 
     <div class="space-y-4">
-      <input type="password" id="admin-pin-input" placeholder="أدخل رمز المرور (PIN)..." class="w-full px-4 py-3 rounded-2xl bg-slate-900 border border-slate-700 text-center text-lg tracking-widest text-amber-400 font-mono focus:outline-none focus:border-amber-400" />
+      <input type="password" id="admin-pin-input" placeholder="أدخل رمز المرور (PIN)..." class="w-full px-4 py-3 rounded-2xl bg-[#0A192F] border border-white/15 text-center text-lg tracking-widest text-white font-mono focus:outline-none focus:border-white" />
       
       <button onclick="window.seragAdmin.authenticate(document.getElementById('admin-pin-input').value)" class="btn-serag-primary w-full py-3.5 rounded-2xl font-bold text-sm">
         دخول لوحة التحكم
       </button>
 
       <div class="pt-2">
-        <button onclick="document.getElementById('admin-pin-input').value='serag2026'; window.seragAdmin.authenticate('serag2026')" class="text-xs text-amber-400/80 hover:text-amber-300 underline">
+        <button onclick="document.getElementById('admin-pin-input').value='serag2026'; window.seragAdmin.authenticate('serag2026')" class="text-xs text-white/80 hover:text-white underline">
           (اضغط هنا لتسجيل الدخول التجريبي التلقائي: serag2026)
         </button>
       </div>
@@ -62,49 +62,49 @@
     <!-- KPI Stats Cards -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       
-      <div class="p-6 rounded-2xl bg-[#001B30] border border-slate-800">
+      <div class="p-6 rounded-2xl bg-[#001428] border border-white/10">
         <span class="text-xs font-bold text-slate-400 block mb-1">إجمالي العطور بالكتالوج</span>
         <div id="stat-total-products" class="text-3xl font-black text-white">45</div>
-        <span class="text-[11px] text-amber-400 font-semibold mt-1 block">نشطة في المتجر</span>
+        <span class="text-[11px] text-white font-semibold mt-1 block">نشطة في المتجر</span>
       </div>
 
-      <div class="p-6 rounded-2xl bg-[#001B30] border border-slate-800">
+      <div class="p-6 rounded-2xl bg-[#001428] border border-white/10">
         <span class="text-xs font-bold text-slate-400 block mb-1">عطور قسم دخوني (١,٧٠٠ ج.م)</span>
-        <div id="stat-dokhoony-products" class="text-3xl font-black text-amber-400">27</div>
+        <div id="stat-dokhoony-products" class="text-3xl font-black text-white">27</div>
         <span class="text-[11px] text-slate-400 font-semibold mt-1 block">سعر موحد ١,٧٠٠ ج.م</span>
       </div>
 
-      <div class="p-6 rounded-2xl bg-[#001B30] border border-slate-800">
+      <div class="p-6 rounded-2xl bg-[#001428] border border-white/10">
         <span class="text-xs font-bold text-slate-400 block mb-1">عطور قسم أبرق والبوكسات</span>
-        <div id="stat-abraaq-products" class="text-3xl font-black text-blue-400">18</div>
+        <div id="stat-abraaq-products" class="text-3xl font-black text-white">18</div>
         <span class="text-[11px] text-slate-400 font-semibold mt-1 block">١٥ عطر + ٣ مجموعات</span>
       </div>
 
-      <div class="p-6 rounded-2xl bg-[#001B30] border border-slate-800">
+      <div class="p-6 rounded-2xl bg-[#001428] border border-white/10">
         <span class="text-xs font-bold text-slate-400 block mb-1">قيمة المخزون التجاري المقدرة</span>
-        <div id="stat-total-value" class="text-2xl font-black text-emerald-400">0 EGP</div>
+        <div id="stat-total-value" class="text-2xl font-black text-white">0 EGP</div>
         <span id="stat-total-stock" class="text-[11px] text-slate-400 font-semibold mt-1 block">0 قطعة</span>
       </div>
 
     </div>
 
     <!-- Action Bar & Controls -->
-    <div class="bg-[#001B30] p-6 rounded-3xl border border-slate-800 space-y-6">
+    <div class="bg-[#001428] p-6 rounded-3xl border border-white/10 space-y-6">
       
       <div class="flex flex-col lg:flex-row items-center justify-between gap-4">
         
         <!-- Category Filter Tabs -->
         <div class="flex flex-wrap items-center gap-2">
-          <button data-category="all" class="admin-filter-tab active px-4 py-2 rounded-xl text-xs font-bold bg-slate-900 text-white border border-slate-700">
+          <button data-category="all" class="admin-filter-tab active px-4 py-2 rounded-xl text-xs font-bold bg-[#0A192F] text-white border border-white/15">
             الكل (45+)
           </button>
-          <button data-category="dokhoony" class="admin-filter-tab px-4 py-2 rounded-xl text-xs font-bold bg-slate-950 text-slate-400 hover:text-white border border-slate-800">
+          <button data-category="dokhoony" class="admin-filter-tab px-4 py-2 rounded-xl text-xs font-bold bg-[#001428] text-slate-400 hover:text-white border border-white/10">
             قسم دخوني (27)
           </button>
-          <button data-category="abraaq" class="admin-filter-tab px-4 py-2 rounded-xl text-xs font-bold bg-slate-950 text-slate-400 hover:text-white border border-slate-800">
+          <button data-category="abraaq" class="admin-filter-tab px-4 py-2 rounded-xl text-xs font-bold bg-[#001428] text-slate-400 hover:text-white border border-white/10">
             قسم أبرق (15)
           </button>
-          <button data-category="special" class="admin-filter-tab px-4 py-2 rounded-xl text-xs font-bold bg-slate-950 text-slate-400 hover:text-white border border-slate-800">
+          <button data-category="special" class="admin-filter-tab px-4 py-2 rounded-xl text-xs font-bold bg-[#001428] text-slate-400 hover:text-white border border-white/10">
             البوكسات الملكية (3)
           </button>
         </div>
@@ -115,14 +115,14 @@
             <span>+</span>
             <span>إضافة عطر جديد</span>
           </button>
-          <button onclick="window.seragAdmin.exportCatalogJSON()" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-200 transition">
+          <button onclick="window.seragAdmin.exportCatalogJSON()" class="px-4 py-2.5 rounded-xl bg-[#0A192F] hover:bg-slate-700 text-xs font-bold text-slate-200 transition">
             📥 تصدير JSON
           </button>
-          <label class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-200 cursor-pointer transition">
+          <label class="px-4 py-2.5 rounded-xl bg-[#0A192F] hover:bg-slate-700 text-xs font-bold text-slate-200 cursor-pointer transition">
             📤 استيراد JSON
             <input type="file" accept=".json" class="hidden" onchange="window.seragAdmin.importCatalogJSON(this.files[0])" />
           </label>
-          <button onclick="window.seragAdmin.resetToDefaults()" class="px-4 py-2.5 rounded-xl bg-amber-900/40 hover:bg-amber-900/60 text-xs font-bold text-amber-300 border border-amber-500/30 transition">
+          <button onclick="window.seragAdmin.resetToDefaults()" class="px-4 py-2.5 rounded-xl bg-[#0A192F] hover:bg-[#0A192F] text-xs font-bold text-white border border-white/20 transition">
             🔄 استعادة الافتراضي
           </button>
         </div>
@@ -131,7 +131,7 @@
 
       <!-- Search Input -->
       <div class="relative">
-        <input type="text" id="admin-search-input" placeholder="بحث فوري بالاسم العربي أو الإنجليزي أو العائلة العطرية..." class="w-full px-4 py-3 pr-10 rounded-2xl bg-slate-950 border border-slate-800 text-sm text-white focus:outline-none focus:border-amber-400" />
+        <input type="text" id="admin-search-input" placeholder="بحث فوري بالاسم العربي أو الإنجليزي أو العائلة العطرية..." class="w-full px-4 py-3 pr-10 rounded-2xl bg-[#001428] border border-white/10 text-sm text-white focus:outline-none focus:border-white" />
         <div class="absolute inset-y-0 right-0 pr-3 flex items-center text-slate-500">
           🔍
         </div>
@@ -140,10 +140,10 @@
     </div>
 
     <!-- Products Inventory Table -->
-    <div class="bg-[#001B30] rounded-3xl border border-slate-800 overflow-hidden shadow-xl">
+    <div class="bg-[#001428] rounded-3xl border border-white/10 overflow-hidden shadow-xl">
       <div class="overflow-x-auto">
         <table class="w-full text-right text-sm">
-          <thead class="bg-slate-950/80 text-xs font-bold text-slate-400 border-b border-slate-800 uppercase tracking-wider">
+          <thead class="bg-[#001428]/80 text-xs font-bold text-slate-400 border-b border-white/10 uppercase tracking-wider">
             <tr>
               <th class="px-4 py-3">الكود</th>
               <th class="px-4 py-3">العطر والمظهر</th>
@@ -165,8 +165,8 @@
 
   <!-- Add / Edit Product Modal -->
   <div id="product-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
-    <div class="bg-[#001B30] w-full max-w-2xl rounded-3xl p-6 sm:p-8 shadow-2xl border border-amber-400/30 max-h-[90vh] overflow-y-auto">
-      <div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-800">
+    <div class="bg-[#001428] w-full max-w-2xl rounded-3xl p-6 sm:p-8 shadow-2xl border border-white/30 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between pb-4 mb-4 border-b border-white/10">
         <h3 id="product-modal-title" class="font-bold text-lg text-white">إضافة عطر جديد</h3>
         <button onclick="window.seragAdmin.closeModal('product-modal')" class="text-slate-400 hover:text-white">✕</button>
       </div>
@@ -175,18 +175,18 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label class="block text-slate-400 font-bold mb-1">الاسم بالعربية *</label>
-            <input type="text" id="prod-name-ar" required class="w-full px-3 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-amber-400" />
+            <input type="text" id="prod-name-ar" required class="w-full px-3 py-2.5 rounded-xl bg-[#0A192F] border border-white/15 text-white focus:outline-none focus:border-white" />
           </div>
           <div>
             <label class="block text-slate-400 font-bold mb-1">الاسم بالإنجليزية *</label>
-            <input type="text" id="prod-name-en" required class="w-full px-3 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-amber-400" />
+            <input type="text" id="prod-name-en" required class="w-full px-3 py-2.5 rounded-xl bg-[#0A192F] border border-white/15 text-white focus:outline-none focus:border-white" />
           </div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div>
             <label class="block text-slate-400 font-bold mb-1">القسم *</label>
-            <select id="prod-category" class="w-full px-3 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-amber-400">
+            <select id="prod-category" class="w-full px-3 py-2.5 rounded-xl bg-[#0A192F] border border-white/15 text-white focus:outline-none focus:border-white">
               <option value="dokhoony">قسم دخوني (١,٧٠٠ ج.م)</option>
               <option value="abraaq">قسم أبرق (١,٨٥٠ ج.م)</option>
               <option value="special">المجموعات الملكية والبوكسات</option>
@@ -194,49 +194,49 @@
           </div>
           <div>
             <label class="block text-slate-400 font-bold mb-1">السعر (ج.م) *</label>
-            <input type="number" id="prod-price" required class="w-full px-3 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-amber-400" />
+            <input type="number" id="prod-price" required class="w-full px-3 py-2.5 rounded-xl bg-[#0A192F] border border-white/15 text-white focus:outline-none focus:border-white" />
           </div>
           <div>
             <label class="block text-slate-400 font-bold mb-1">الحجم *</label>
-            <input type="text" id="prod-volume" value="100ml / 3.4 fl oz" class="w-full px-3 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-amber-400" />
+            <input type="text" id="prod-volume" value="100ml / 3.4 fl oz" class="w-full px-3 py-2.5 rounded-xl bg-[#0A192F] border border-white/15 text-white focus:outline-none focus:border-white" />
           </div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label class="block text-slate-400 font-bold mb-1">العائلة العطرية</label>
-            <input type="text" id="prod-family" placeholder="مثال: Woody Oud / Floral" class="w-full px-3 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-amber-400" />
+            <input type="text" id="prod-family" placeholder="مثال: Woody Oud / Floral" class="w-full px-3 py-2.5 rounded-xl bg-[#0A192F] border border-white/15 text-white focus:outline-none focus:border-white" />
           </div>
           <div>
             <label class="block text-slate-400 font-bold mb-1">شارة التميز (Badge)</label>
-            <input type="text" id="prod-badge" placeholder="مثال: Bestseller / VIP Choice" class="w-full px-3 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-amber-400" />
+            <input type="text" id="prod-badge" placeholder="مثال: Bestseller / VIP Choice" class="w-full px-3 py-2.5 rounded-xl bg-[#0A192F] border border-white/15 text-white focus:outline-none focus:border-white" />
           </div>
         </div>
 
         <div class="space-y-2">
           <div>
             <label class="block text-slate-400 font-bold mb-1">القمة العطرية (Top Notes)</label>
-            <input type="text" id="prod-top" placeholder="مثال: Bergamot, Cardamom" class="w-full px-3 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-amber-400" />
+            <input type="text" id="prod-top" placeholder="مثال: Bergamot, Cardamom" class="w-full px-3 py-2.5 rounded-xl bg-[#0A192F] border border-white/15 text-white focus:outline-none focus:border-white" />
           </div>
           <div>
             <label class="block text-slate-400 font-bold mb-1">قلب العطر (Heart Notes)</label>
-            <input type="text" id="prod-heart" placeholder="مثال: Damask Rose, Smoky Incense" class="w-full px-3 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-amber-400" />
+            <input type="text" id="prod-heart" placeholder="مثال: Damask Rose, Smoky Incense" class="w-full px-3 py-2.5 rounded-xl bg-[#0A192F] border border-white/15 text-white focus:outline-none focus:border-white" />
           </div>
           <div>
             <label class="block text-slate-400 font-bold mb-1">القاعدة العطرية (Base Notes)</label>
-            <input type="text" id="prod-base" placeholder="مثال: Royal Agarwood, White Musk" class="w-full px-3 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-amber-400" />
+            <input type="text" id="prod-base" placeholder="مثال: Royal Agarwood, White Musk" class="w-full px-3 py-2.5 rounded-xl bg-[#0A192F] border border-white/15 text-white focus:outline-none focus:border-white" />
           </div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label class="block text-slate-400 font-bold mb-1">الكمية المتوفرة بالمخزون</label>
-            <input type="number" id="prod-stock" value="25" class="w-full px-3 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-amber-400" />
+            <input type="number" id="prod-stock" value="25" class="w-full px-3 py-2.5 rounded-xl bg-[#0A192F] border border-white/15 text-white focus:outline-none focus:border-white" />
           </div>
         </div>
 
-        <div class="pt-4 flex items-center justify-end gap-3 border-t border-slate-800">
-          <button type="button" onclick="window.seragAdmin.closeModal('product-modal')" class="px-5 py-2.5 rounded-xl bg-slate-800 text-slate-300 font-bold hover:bg-slate-700 transition">
+        <div class="pt-4 flex items-center justify-end gap-3 border-t border-white/10">
+          <button type="button" onclick="window.seragAdmin.closeModal('product-modal')" class="px-5 py-2.5 rounded-xl bg-[#0A192F] text-slate-300 font-bold hover:bg-slate-700 transition">
             إلغاء
           </button>
           <button type="submit" class="btn-serag-primary px-6 py-2.5 rounded-xl text-white font-bold">
@@ -249,18 +249,18 @@
 
   <!-- Image Upload Modal -->
   <div id="image-upload-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
-    <div class="bg-[#001B30] w-full max-w-md rounded-3xl p-6 shadow-2xl border border-amber-400/30 text-center">
-      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+    <div class="bg-[#001428] w-full max-w-md rounded-3xl p-6 shadow-2xl border border-white/30 text-center">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-white/10">
         <h3 class="font-bold text-base text-white">رفع صورة خاصة للعطر</h3>
         <button onclick="window.seragAdmin.closeModal('image-upload-modal')" class="text-slate-400 hover:text-white">✕</button>
       </div>
 
-      <p id="image-upload-prod-name" class="font-bold text-amber-400 text-sm mb-4"></p>
+      <p id="image-upload-prod-name" class="font-bold text-white text-sm mb-4"></p>
 
-      <div id="image-upload-preview" class="w-40 h-48 mx-auto mb-4 bg-slate-900 rounded-2xl p-3 flex items-center justify-center border border-amber-400/30">
+      <div id="image-upload-preview" class="w-40 h-48 mx-auto mb-4 bg-[#0A192F] rounded-2xl p-3 flex items-center justify-center border border-white/30">
       </div>
 
-      <label class="block w-full cursor-pointer py-3 px-4 rounded-2xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs transition mb-2 shadow-lg">
+      <label class="block w-full cursor-pointer py-3 px-4 rounded-2xl bg-[#0A192F] hover:bg-[#0A192F] text-slate-950 font-bold text-xs transition mb-2 shadow-lg">
         📁 اختر صورة من جهازك
         <input type="file" id="image-file-input" accept="image/*" class="hidden" />
       </label>

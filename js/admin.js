@@ -113,15 +113,15 @@ class SeragAdmin {
     tbody.innerHTML = filtered.map(p => {
       const isLowStock = (p.stockCount || 0) < 15;
       const stockBadge = isLowStock 
-        ? '<span class="px-2 py-1 text-xs rounded-full bg-red-100 text-red-700 font-bold">مخزون منخفض (' + (p.stockCount || 0) + ')</span>'
-        : '<span class="px-2 py-1 text-xs rounded-full bg-emerald-100 text-emerald-700 font-bold">متوفر (' + (p.stockCount || 0) + ')</span>';
+        ? '<span class="px-2 py-1 text-xs rounded-full bg-[#0A192F] text-white font-bold">مخزون منخفض (' + (p.stockCount || 0) + ')</span>'
+        : '<span class="px-2 py-1 text-xs rounded-full bg-[#0A192F] text-white font-bold">متوفر (' + (p.stockCount || 0) + ')</span>';
 
       return `
         <tr class="hover:bg-slate-50/80 transition-colors border-b border-slate-100">
           <td class="px-4 py-3 font-mono text-xs text-slate-500">#${p.id}</td>
           <td class="px-4 py-3">
             <div class="flex items-center gap-3">
-              <div class="w-12 h-14 bg-slate-100 rounded-lg flex items-center justify-center p-1 border border-amber-200 shrink-0">
+              <div class="w-12 h-14 bg-slate-100 rounded-lg flex items-center justify-center p-1 border border-[#0A192F]/20 shrink-0">
                 ${getBottleSVG(p)}
               </div>
               <div>
@@ -131,7 +131,7 @@ class SeragAdmin {
             </div>
           </td>
           <td class="px-4 py-3">
-            <span class="px-2.5 py-1 text-xs rounded-full ${p.category === 'dokhoony' ? 'bg-amber-100 text-amber-900' : 'bg-blue-100 text-blue-900'} font-semibold">
+            <span class="px-2.5 py-1 text-xs rounded-full ${p.category === 'dokhoony' ? 'bg-[#0A192F] text-white' : 'bg-[#0A192F] text-white'} font-semibold">
               ${p.categoryNameAr || p.category}
             </span>
           </td>
@@ -149,7 +149,7 @@ class SeragAdmin {
               <button onclick="window.seragAdmin.openImageUploadModal(${p.id})" class="p-1.5 text-blue-600 hover:bg-blue-50 rounded-lg transition" title="رفع صورة">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
               </button>
-              <button onclick="window.seragAdmin.openEditModal(${p.id})" class="p-1.5 text-amber-600 hover:bg-amber-50 rounded-lg transition" title="تعديل">
+              <button onclick="window.seragAdmin.openEditModal(${p.id})" class="p-1.5 text-[#0A192F] hover:bg-amber-50 rounded-lg transition" title="تعديل">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
               </button>
               <button onclick="window.seragAdmin.deleteProduct(${p.id})" class="p-1.5 text-red-600 hover:bg-red-50 rounded-lg transition" title="حذف">

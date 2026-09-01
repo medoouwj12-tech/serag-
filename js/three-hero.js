@@ -35,9 +35,9 @@ class Serag3DHero {
         price: 1700,
         image: 'assets/images/crown-black.jpg',
         liquidColor: 0x111625,
-        capColor: 0xD4AF37,
+        capColor: 0x0A192F,
         glassTint: 0xFFFFFF,
-        lightColor: 0xFFF2D1
+        lightColor: 0xFFFFFF
       },
       {
         id: 1,
@@ -48,9 +48,9 @@ class Serag3DHero {
         price: 1700,
         image: 'assets/images/shiny.jpg',
         liquidColor: 0xDF8C96,
-        capColor: 0xD4AF37,
+        capColor: 0x0A192F,
         glassTint: 0xFFFAF0,
-        lightColor: 0xFFEBD8
+        lightColor: 0xFFFFFF
       },
       {
         id: 28,
@@ -61,9 +61,9 @@ class Serag3DHero {
         price: 1850,
         image: 'assets/images/emerald-soul.jpeg',
         liquidColor: 0x0F5257,
-        capColor: 0xC5A059,
+        capColor: 0x0A192F,
         glassTint: 0xEEF8F6,
-        lightColor: 0xD6F5E8
+        lightColor: 0xFFFFFF
       },
       {
         id: 37,
@@ -74,9 +74,9 @@ class Serag3DHero {
         price: 1850,
         image: 'assets/images/french-tobacco.jpg',
         liquidColor: 0x6E3B1B,
-        capColor: 0xD4AF37,
+        capColor: 0x0A192F,
         glassTint: 0xFFF5EC,
-        lightColor: 0xFFE5CC
+        lightColor: 0xFFFFFF
       },
       {
         id: 44,
@@ -87,7 +87,7 @@ class Serag3DHero {
         price: 2600,
         image: 'assets/images/diamond-collection-blue-red-white.jpg',
         liquidColor: 0x0A192F,
-        capColor: 0xE5C07B,
+        capColor: 0xFFFFFF,
         glassTint: 0xFFFFFF,
         lightColor: 0xFFFFFF
       },
@@ -100,9 +100,9 @@ class Serag3DHero {
         price: 1850,
         image: 'assets/images/blue-diamond-aqua.jpg',
         liquidColor: 0x0B4F6C,
-        capColor: 0xD4AF37,
+        capColor: 0x0A192F,
         glassTint: 0xE6F4F8,
-        lightColor: 0xD8F0FF
+        lightColor: 0xFFFFFF
       }
     ];
 
@@ -174,7 +174,7 @@ class Serag3DHero {
     this.scene.add(ambientLight);
 
     // Main Golden Key Light
-    this.keyLight = new THREE.DirectionalLight(0xFFF4D6, 2.0);
+    this.keyLight = new THREE.DirectionalLight(0xFFFFFF, 2.0);
     this.keyLight.position.set(4, 6, 4);
     this.keyLight.castShadow = true;
     this.keyLight.shadow.mapSize.width = 1024;
@@ -187,7 +187,7 @@ class Serag3DHero {
     this.scene.add(this.rimLight);
 
     // Gold Uplight
-    this.upLight = new THREE.PointLight(0xD4AF37, 2.0, 12);
+    this.upLight = new THREE.PointLight(0x0A192F, 2.0, 12);
     this.upLight.position.set(0, -2.5, 2.5);
     this.scene.add(this.upLight);
   }
@@ -257,7 +257,7 @@ class Serag3DHero {
     // 5. Gold Metallic Frame Trim
     const frameGeo = new THREE.BoxGeometry(2.14, 2.74, 0.97);
     const frameMat = new THREE.MeshStandardMaterial({
-      color: 0xD4AF37,
+      color: 0x0A192F,
       metalness: 0.92,
       roughness: 0.2,
       wireframe: true
@@ -274,7 +274,7 @@ class Serag3DHero {
     // 7. Gold Metallic Collar
     const collarGeo = new THREE.CylinderGeometry(0.46, 0.46, 0.35, 32);
     this.collarMat = new THREE.MeshStandardMaterial({
-      color: 0xD4AF37,
+      color: 0x0A192F,
       metalness: 0.95,
       roughness: 0.15
     });
@@ -285,7 +285,7 @@ class Serag3DHero {
     // 8. Regal Crown / Crystal Cap
     const capGeo = new THREE.CylinderGeometry(0.68, 0.58, 0.9, 8);
     this.capMat = new THREE.MeshStandardMaterial({
-      color: 0xD4AF37,
+      color: 0x0A192F,
       metalness: 0.9,
       roughness: 0.2
     });
@@ -306,7 +306,7 @@ class Serag3DHero {
 
     // Podium Gold Ring Rim
     const ringGeo = new THREE.TorusGeometry(2.32, 0.04, 16, 64);
-    const ringMat = new THREE.MeshStandardMaterial({ color: 0xD4AF37, metalness: 0.95, roughness: 0.1 });
+    const ringMat = new THREE.MeshStandardMaterial({ color: 0x0A192F, metalness: 0.95, roughness: 0.1 });
     const ringMesh = new THREE.Mesh(ringGeo, ringMat);
     ringMesh.rotation.x = Math.PI / 2;
     ringMesh.position.set(0, -1.52, 0);
@@ -338,10 +338,10 @@ class Serag3DHero {
     geo.setAttribute('scale', new THREE.BufferAttribute(scales, 1));
 
     const mat = new THREE.PointsMaterial({
-      color: 0xD4AF37,
-      size: 0.09,
+      color: 0xFFFFFF,
+      size: 0.08,
       transparent: true,
-      opacity: 0.7,
+      opacity: 0.75,
       blending: THREE.AdditiveBlending
     });
 
@@ -412,11 +412,11 @@ class Serag3DHero {
 
     // Top Selector Pills
     const pillsHTML = `
-      <div class="flex items-center justify-center gap-1.5 overflow-x-auto py-1 px-2 bg-slate-900/85 backdrop-blur-md rounded-2xl border border-amber-500/30 shadow-lg">
+      <div class="flex items-center justify-center gap-1.5 overflow-x-auto py-1 px-2 bg-slate-900/85 backdrop-blur-md rounded-2xl border border-white/20 shadow-lg">
         ${this.showcaseProducts.map((p, idx) => `
           <button onclick="window.seragHero3D.loadProduct(${idx})" 
                   id="hero-pill-${idx}"
-                  class="hero-3d-pill px-3 py-1.5 rounded-xl text-xs font-bold transition-all shrink-0 ${idx === this.currentIndex ? 'bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 shadow-md font-black' : 'text-slate-300 hover:text-white hover:bg-slate-800'}">
+                  class="hero-3d-pill px-3 py-1.5 rounded-xl text-xs font-bold transition-all shrink-0 ${idx === this.currentIndex ? 'bg-white text-[#0A192F] font-black shadow-md' : 'text-slate-300 hover:text-white hover:bg-slate-800'}">
             ${p.nameAr}
           </button>
         `).join('')}
@@ -425,13 +425,13 @@ class Serag3DHero {
 
     // Bottom Info Card
     const infoCardHTML = `
-      <div id="hero-3d-info-card" class="mt-auto bg-slate-950/90 backdrop-blur-md p-3.5 rounded-2xl border border-amber-400/30 shadow-2xl flex items-center justify-between gap-3 text-white transition-all">
+      <div id="hero-3d-info-card" class="mt-auto bg-slate-950/90 backdrop-blur-md p-3.5 rounded-2xl border border-white/20 shadow-2xl flex items-center justify-between gap-3 text-white transition-all">
         <div class="flex items-center gap-3">
-          <div class="w-11 h-11 rounded-xl overflow-hidden bg-slate-900 border border-amber-300/40 p-0.5 shrink-0">
+          <div class="w-11 h-11 rounded-xl overflow-hidden bg-slate-900 border border-white/20 p-0.5 shrink-0">
             <img id="hero-3d-thumb" src="${this.showcaseProducts[0].image}" alt="Perfume" class="w-full h-full object-contain" />
           </div>
           <div>
-            <div id="hero-3d-title" class="font-bold text-sm text-amber-300 font-arabic">كراون بلاك • Crown Black</div>
+            <div id="hero-3d-title" class="font-bold text-sm text-white font-bold font-arabic">كراون بلاك • Crown Black</div>
             <div id="hero-3d-sub" class="text-[11px] text-slate-400">قسم دخوني (١,٧٠٠ ج.م)</div>
           </div>
         </div>
@@ -462,7 +462,7 @@ class Serag3DHero {
       const pill = document.getElementById(`hero-pill-${idx}`);
       if (pill) {
         if (idx === this.currentIndex) {
-          pill.className = 'hero-3d-pill px-3 py-1.5 rounded-xl text-xs font-black transition-all shrink-0 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 shadow-md scale-105';
+          pill.className = 'hero-3d-pill px-3 py-1.5 rounded-xl text-xs font-black transition-all shrink-0 bg-white text-[#0A192F] font-black shadow-md scale-105';
         } else {
           pill.className = 'hero-3d-pill px-3 py-1.5 rounded-xl text-xs font-bold transition-all shrink-0 text-slate-300 hover:text-white hover:bg-slate-800';
         }

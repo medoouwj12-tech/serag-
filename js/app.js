@@ -136,7 +136,7 @@ class SeragApp {
     if (list.length === 0) {
       grid.innerHTML = `
         <div class="col-span-full py-16 text-center">
-          <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-amber-50 dark:bg-slate-800 flex items-center justify-center text-amber-500">
+          <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-[#0A192F] dark:bg-slate-800 flex items-center justify-center text-[#0A192F]">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
           </div>
           <h3 class="text-xl font-bold text-[#002B49] dark:text-white mb-1">
@@ -145,7 +145,7 @@ class SeragApp {
           <p class="text-[#162C4E] text-sm">
             ${isRtl ? 'جرب البحث بكلمات أخرى أو إعادة ضبط الفلاتر' : 'Try searching with different terms or reset your filters.'}
           </p>
-          <button onclick="window.seragApp.resetFilters()" class="mt-4 px-5 py-2 bg-slate-900 text-white rounded-full text-sm font-semibold hover:bg-amber-600 transition">
+          <button onclick="window.seragApp.resetFilters()" class="mt-4 px-5 py-2 bg-slate-900 text-white rounded-full text-sm font-semibold hover:bg-[#0A192F] transition">
             ${isRtl ? 'إعادة ضبط الفلاتر' : 'Reset Filters'}
           </button>
         </div>
@@ -154,7 +154,7 @@ class SeragApp {
     }
 
     grid.innerHTML = list.map(product => {
-      const badgeClass = product.badge === 'VIP Choice' || product.badge === 'VIP' ? 'badge-navy' : (product.badge === 'Exclusive' || product.badge === 'Royal Set' ? 'badge-exclusive' : 'badge-gold');
+      const badgeClass = 'badge-serag';
       const badgeText = product.badge || (product.category === 'dokhoony' ? 'Dokhoony' : 'Abraaq');
 
       return `
@@ -164,7 +164,7 @@ class SeragApp {
           
           <!-- Scent Family Tag -->
           <div class="text-right ${isRtl ? 'text-left' : 'text-right'} mb-1">
-            <span class="text-[11px] font-semibold tracking-wider text-amber-700 dark:text-amber-400 uppercase bg-amber-50 dark:bg-amber-950/40 px-2.5 py-1 rounded-full">
+            <span class="text-[11px] font-semibold tracking-wider text-[#0A192F] font-bold uppercase bg-[#F0F5FA] border border-[#0A192F]/10 px-2.5 py-1 rounded-full">
               ${product.scentFamily}
             </span>
           </div>
@@ -177,10 +177,10 @@ class SeragApp {
           <!-- Info Section -->
           <div class="pt-2">
             <div class="flex items-center justify-between gap-2 mb-1">
-              <h3 class="font-bold text-lg text-[#0A192F] dark:text-white group-hover:text-amber-600 transition truncate">
+              <h3 class="font-bold text-lg text-[#0A192F] dark:text-white group-hover:text-[#0A192F] transition truncate">
                 ${isRtl ? product.nameAr : product.nameEn}
               </h3>
-              <div class="flex items-center gap-1 text-amber-500 text-xs font-bold shrink-0">
+              <div class="flex items-center gap-1 text-[#0A192F] text-xs font-black shrink-0">
                 <span>★</span>
                 <span>${product.rating}</span>
               </div>
@@ -198,11 +198,11 @@ class SeragApp {
             </div>
 
             <!-- Price & Actions -->
-            <div class="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between gap-2">
+            <div class="pt-3 border-t border-[#0A192F]/10 dark:border-slate-800/80 flex items-center justify-between gap-2">
               <div>
                 <span class="text-xs text-[#162C4E] block">${isRtl ? 'السعر' : 'Price'}</span>
                 <span class="font-extrabold text-lg text-[#0A192F] dark:text-white">
-                  ${product.price.toLocaleString()} <span class="text-xs font-bold text-amber-600">${isRtl ? 'ج.م' : 'EGP'}</span>
+                  ${product.price.toLocaleString()} <span class="text-xs font-bold text-[#0A192F]">${isRtl ? 'ج.م' : 'EGP'}</span>
                 </span>
               </div>
 
@@ -237,24 +237,24 @@ class SeragApp {
     const isRtl = this.currentLang === 'ar';
 
     container.innerHTML = specialProducts.map(item => `
-      <div class="glass-dark rounded-3xl p-6 sm:p-8 flex flex-col lg:flex-row items-center gap-8 relative overflow-hidden gold-shimmer border border-amber-400/30">
+      <div class="glass-dark rounded-3xl p-6 sm:p-8 flex flex-col lg:flex-row items-center gap-8 relative overflow-hidden gold-shimmer border border-[#0A192F]/20">
         <div class="w-full lg:w-1/3 flex justify-center shrink-0">
-          <div class="w-56 h-64 bg-slate-900/60 rounded-2xl p-4 flex items-center justify-center border border-amber-300/40 shadow-2xl">
+          <div class="w-56 h-64 bg-[#001428] rounded-2xl p-4 flex items-center justify-center border border-[#0A192F]/20 shadow-2xl">
             ${getBottleSVG(item)}
           </div>
         </div>
         <div class="flex-1 text-center lg:text-left ${isRtl ? 'lg:text-right' : ''}">
-          <div class="inline-block px-3 py-1 rounded-full bg-amber-400/20 text-amber-300 text-xs font-bold uppercase tracking-wider mb-3 border border-amber-400/40">
+          <div class="inline-block px-3 py-1 rounded-full bg-[#0A192F] text-white text-xs font-bold uppercase tracking-wider mb-3 border border-[#0A192F]/20">
             ${item.badge} • ${item.volume}
           </div>
           <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-2">
             ${isRtl ? item.nameAr : item.nameEn}
           </h3>
-          <p class="text-amber-100/80 text-sm mb-4 leading-relaxed">
+          <p class="text-white/90 text-sm mb-4 leading-relaxed">
             ${item.topNotes}
           </p>
           <div class="flex flex-wrap items-center justify-center ${isRtl ? 'lg:justify-start' : 'lg:justify-start'} gap-4 pt-2">
-            <div class="text-2xl font-black text-amber-300">
+            <div class="text-2xl font-black text-white">
               ${item.price.toLocaleString()} <span class="text-sm font-bold text-white">${isRtl ? 'ج.م' : 'EGP'}</span>
             </div>
             <button onclick="window.seragCart.orderSingleOnWhatsApp(window.seragApp.getProductById(${item.id}))" 
@@ -284,11 +284,11 @@ class SeragApp {
 
     content.innerHTML = `
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <div class="bottle-visual-wrapper bg-slate-50 dark:bg-slate-900/80 p-8 rounded-3xl flex items-center justify-center border border-amber-200/50 min-h-[340px]">
+        <div class="bottle-visual-wrapper bg-[#F0F5FA] dark:bg-slate-900/80 p-8 rounded-3xl flex items-center justify-center border border-[#0A192F]/20 min-h-[340px]">
           ${getBottleSVG(product)}
         </div>
         <div>
-          <div class="inline-block px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-900 dark:text-amber-300 text-xs font-bold mb-3">
+          <div class="inline-block px-3 py-1 rounded-full bg-[#0A192F] dark:bg-[#0A192F] text-[#0A192F] dark:text-white text-xs font-bold mb-3">
             ${product.categoryNameAr || product.category} • ${product.volume}
           </div>
           <h2 class="text-2xl sm:text-3xl font-black text-[#0A192F] dark:text-white mb-1">
@@ -298,8 +298,8 @@ class SeragApp {
             ${isRtl ? product.nameEn : product.nameAr}
           </p>
 
-          <div class="space-y-3 mb-6 bg-slate-50 dark:bg-slate-800/60 p-4 rounded-2xl border border-slate-100 dark:border-slate-700/60">
-            <h4 class="font-bold text-xs uppercase tracking-wider text-amber-700 dark:text-amber-400">
+          <div class="space-y-3 mb-6 bg-[#F0F5FA] dark:bg-slate-800/60 p-4 rounded-2xl border border-[#0A192F]/10 dark:border-slate-700/60">
+            <h4 class="font-bold text-xs uppercase tracking-wider text-[#0A192F] dark:text-[#0A192F]">
               ${isRtl ? 'الهرم العطري (Olfactory Pyramid)' : 'Olfactory Pyramid'}
             </h4>
             <div class="text-xs text-[#002B49] dark:text-slate-300">
@@ -317,7 +317,7 @@ class SeragApp {
             <div>
               <span class="text-xs text-[#162C4E] block">${isRtl ? 'السعر الرسمي' : 'Official Price'}</span>
               <span class="text-3xl font-black text-[#0A192F] dark:text-white">
-                ${product.price.toLocaleString()} <span class="text-sm font-bold text-amber-600">${isRtl ? 'ج.م' : 'EGP'}</span>
+                ${product.price.toLocaleString()} <span class="text-sm font-bold text-[#0A192F]">${isRtl ? 'ج.م' : 'EGP'}</span>
               </span>
             </div>
             <div class="text-emerald-600 font-bold text-xs bg-emerald-50 dark:bg-emerald-950/40 px-3 py-1.5 rounded-full">
@@ -427,8 +427,8 @@ class SeragApp {
     // 3D Hero Edition Switcher Buttons
     document.querySelectorAll('.hero-theme-pill').forEach(pill => {
       pill.addEventListener('click', () => {
-        document.querySelectorAll('.hero-theme-pill').forEach(p => p.classList.remove('bg-amber-400', 'text-[#0A192F]'));
-        pill.classList.add('bg-amber-400', 'text-[#0A192F]');
+        document.querySelectorAll('.hero-theme-pill').forEach(p => p.classList.remove('bg-[#0A192F]', 'text-[#0A192F]'));
+        pill.classList.add('bg-[#0A192F]', 'text-[#0A192F]');
         const theme = pill.getAttribute('data-theme');
         if (window.seragHero3D) {
           window.seragHero3D.setTheme(theme);

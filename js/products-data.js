@@ -22,7 +22,7 @@ const DEFAULT_PRODUCTS = [
     "baseNotes": "White Musk, Cedar",
     "shape": "shine",
     "badge": "Bestseller",
-    "themeColor": "#D4AF37",
+    "themeColor": "#0A192F",
     "rating": 4.9,
     "reviewsCount": 48,
     "inStock": true,
@@ -118,7 +118,7 @@ const DEFAULT_PRODUCTS = [
     "baseNotes": "Imperial Oud, Golden Amber",
     "shape": "gold",
     "badge": "Signature",
-    "themeColor": "#C5A059",
+    "themeColor": "#0A192F",
     "rating": 4.9,
     "reviewsCount": 45,
     "inStock": true,
@@ -214,7 +214,7 @@ const DEFAULT_PRODUCTS = [
     "baseNotes": "Cambodian Oud, Musk",
     "shape": "crown",
     "badge": "Legendary",
-    "themeColor": "#C5A059",
+    "themeColor": "#0A192F",
     "rating": 4.9,
     "reviewsCount": 57,
     "inStock": true,
@@ -286,7 +286,7 @@ const DEFAULT_PRODUCTS = [
     "baseNotes": "Royal Agarwood, Musk",
     "shape": "gold",
     "badge": "Exclusive",
-    "themeColor": "#D4AF37",
+    "themeColor": "#0A192F",
     "rating": 4.9,
     "reviewsCount": 66,
     "inStock": true,
@@ -1078,7 +1078,7 @@ const DEFAULT_PRODUCTS = [
     "baseNotes": "Rich Oud & Amber Foundations",
     "shape": "box",
     "badge": "Gift Edition",
-    "themeColor": "#C5A059",
+    "themeColor": "#0A192F",
     "rating": 5.0,
     "reviewsCount": 148,
     "inStock": true,
@@ -1116,7 +1116,7 @@ function getBottleSVG(product) {
   const imgSrc = product.customImage || product.image;
   
   if (imgSrc && !imgSrc.endsWith('.svg') && !imgSrc.includes('assets/images/shiny.png') && !imgSrc.includes('assets/images/aura.png')) {
-    return `<div class="bottle-image-container relative w-full h-[220px] flex items-center justify-center overflow-hidden rounded-2xl p-2 bg-gradient-to-b from-transparent via-slate-50/50 to-amber-50/20 dark:via-slate-900/40 dark:to-slate-950/60">
+    return `<div class="bottle-image-container relative w-full h-[220px] flex items-center justify-center overflow-hidden rounded-2xl p-2 bg-[#F8FAFC] dark:via-slate-900/40 dark:to-slate-950/60">
       <img src="${imgSrc}" alt="${product.nameEn}" class="bottle-real-img max-h-full max-w-full object-contain drop-shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:drop-shadow-[0_15px_25px_rgba(212,175,55,0.25)]" loading="lazy" onerror="this.parentElement.innerHTML = getFallbackBottleSVG(window.seragApp ? window.seragApp.getProductById(${product.id}) : null);" />
     </div>`;
   }
@@ -1125,8 +1125,8 @@ function getBottleSVG(product) {
 }
 
 function getFallbackBottleSVG(product) {
-  if (!product) product = { nameAr: "سراج", themeColor: "#C5A059", id: 99 };
-  const color = product.themeColor || '#C5A059';
+  if (!product) product = { nameAr: "سراج", themeColor: "#0A192F", id: 99 };
+  const color = product.themeColor || '#0A192F';
   const isDark = product.themeColor === '#0A192F' || product.themeColor === '#1C1D21' || product.themeColor === '#111827';
   
   if (product.shape === 'tobacco_box' || product.shape === 'box') {
@@ -1138,18 +1138,18 @@ function getFallbackBottleSVG(product) {
       '<stop offset="100%" stop-color="#001B30"/>' +
       '</linearGradient>' +
       '<linearGradient id="goldBorder-' + product.id + '" x1="0%" y1="0%" x2="100%" y2="100%">' +
-      '<stop offset="0%" stop-color="#F4E7C3"/>' +
-      '<stop offset="50%" stop-color="#D4AF37"/>' +
-      '<stop offset="100%" stop-color="#9A7B38"/>' +
+      '<stop offset="0%" stop-color="#FFFFFF"/>' +
+      '<stop offset="50%" stop-color="#0A192F"/>' +
+      '<stop offset="100%" stop-color="#0A192F"/>' +
       '</linearGradient>' +
       '</defs>' +
       '<rect x="25" y="45" width="150" height="160" rx="8" fill="url(#boxGrad-' + product.id + ')" stroke="url(#goldBorder-' + product.id + ')" stroke-width="3"/>' +
       '<rect x="35" y="55" width="130" height="140" rx="5" fill="none" stroke="url(#goldBorder-' + product.id + ')" stroke-width="1" stroke-dasharray="3,3"/>' +
       '<rect x="55" y="95" width="90" height="60" rx="4" fill="#001424" stroke="url(#goldBorder-' + product.id + ')" stroke-width="1.5"/>' +
-      '<circle cx="100" cy="115" r="12" fill="none" stroke="#D4AF37" stroke-width="1.5"/>' +
-      '<path d="M96,115 L104,115 M100,110 L100,120" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round"/>' +
-      '<text x="100" y="142" text-anchor="middle" fill="#D4AF37" font-size="9" font-family="Cinzel, serif" font-weight="bold" letter-spacing="1.5">SERAG</text>' +
-      '<text x="100" y="182" text-anchor="middle" fill="#F4E7C3" font-size="8" font-family="Cairo, sans-serif">' + (product.nameAr || '') + '</text>' +
+      '<circle cx="100" cy="115" r="12" fill="none" stroke="#0A192F" stroke-width="1.5"/>' +
+      '<path d="M96,115 L104,115 M100,110 L100,120" stroke="#0A192F" stroke-width="1.5" stroke-linecap="round"/>' +
+      '<text x="100" y="142" text-anchor="middle" fill="#0A192F" font-size="9" font-family="Cinzel, serif" font-weight="bold" letter-spacing="1.5">SERAG</text>' +
+      '<text x="100" y="182" text-anchor="middle" fill="#FFFFFF" font-size="8" font-family="Cairo, sans-serif">' + (product.nameAr || '') + '</text>' +
       '</svg>';
   }
 
@@ -1172,16 +1172,16 @@ function getFallbackBottleSVG(product) {
     '<stop offset="100%" stop-color="#AA771C"/>' +
     '</linearGradient>' +
     '</defs>' +
-    '<path d="M72,15 L108,15 L104,42 L76,42 Z" fill="url(#goldCap-' + product.id + ')" stroke="#9A7B38" stroke-width="0.8"/>' +
+    '<path d="M72,15 L108,15 L104,42 L76,42 Z" fill="url(#goldCap-' + product.id + ')" stroke="#0A192F" stroke-width="0.8"/>' +
     '<rect x="78" y="42" width="24" height="12" rx="1" fill="url(#goldCap-' + product.id + ')"/>' +
     '<path d="M50,75 C50,56 70,54 80,54 L100,54 C110,54 130,56 130,75 L132,215 C132,230 120,235 105,235 L75,235 C60,235 48,230 48,215 Z" fill="url(#liquidGrad-' + product.id + ')" stroke="url(#glassGrad-' + product.id + ')" stroke-width="3.5"/>' +
     '<path d="M56,80 L56,212 C56,222 65,225 78,225" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="2.5" stroke-linecap="round"/>' +
     '<rect x="60" y="110" width="60" height="75" rx="4" fill="#0A192F" stroke="url(#goldCap-' + product.id + ')" stroke-width="1.5"/>' +
-    '<rect x="64" y="114" width="52" height="67" rx="2" fill="none" stroke="#D4AF37" stroke-width="0.7" stroke-dasharray="2,2"/>' +
-    '<text x="90" y="135" text-anchor="middle" fill="#D4AF37" font-size="8" font-family="Cinzel, serif" font-weight="bold" letter-spacing="1">SERAG</text>' +
+    '<rect x="64" y="114" width="52" height="67" rx="2" fill="none" stroke="#0A192F" stroke-width="0.7" stroke-dasharray="2,2"/>' +
+    '<text x="90" y="135" text-anchor="middle" fill="#0A192F" font-size="8" font-family="Cinzel, serif" font-weight="bold" letter-spacing="1">SERAG</text>' +
     '<text x="90" y="148" text-anchor="middle" fill="#FFFFFF" font-size="6.5" font-family="Cairo, sans-serif" font-weight="bold">' + (product.nameAr || '') + '</text>' +
-    '<text x="90" y="162" text-anchor="middle" fill="#F4E7C3" font-size="5" font-family="Plus Jakarta Sans, sans-serif" letter-spacing="0.5">EAU DE PARFUM</text>' +
-    '<text x="90" y="173" text-anchor="middle" fill="#C5A059" font-size="5" font-family="Cinzel, serif">100 ML</text>' +
+    '<text x="90" y="162" text-anchor="middle" fill="#FFFFFF" font-size="5" font-family="Plus Jakarta Sans, sans-serif" letter-spacing="0.5">EAU DE PARFUM</text>' +
+    '<text x="90" y="173" text-anchor="middle" fill="#0A192F" font-size="5" font-family="Cinzel, serif">100 ML</text>' +
     '</svg>';
 }
 
