@@ -3,7 +3,7 @@
  * All Authentic Products, High-Resolution Real Product Images & Verified Pricing
  */
 
-const SERAG_CATALOG_VERSION = "v3_serag_9pm_night_out_2026_09";
+const SERAG_CATALOG_VERSION = "v4_serag_9pm_night_out_2026_09";
 
 const DEFAULT_PRODUCTS = [
   {
@@ -27,7 +27,7 @@ const DEFAULT_PRODUCTS = [
     "reviewsCount": 84,
     "inStock": true,
     "stockCount": 60,
-    "image": "assets/images/9pm-night-out.webp",
+    "image": "assets/images/9pm-bottle-full.png",
     "customImage": null
   },
   {
