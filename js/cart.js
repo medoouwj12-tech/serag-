@@ -211,7 +211,7 @@ class SeragCart {
     let message = '';
 
     if (isRtl) {
-      message = `مرحباً سراج للعطور، أود طلب:
+      message = `مرحباً، أود طلب:
 
 ✨ *${product.nameAr} (${product.nameEn})*
 💰 السعر: *${product.price.toLocaleString()} ج.م*
@@ -287,7 +287,7 @@ Please confirm availability and delivery. Thank you!`;
 `;
       msg += `━━━━━━━━━━━━━━━━━━━━━
 `;
-      msg += `🌟 *سراج للعطور - SERAG FRAGRANCES*`;
+      msg += `🌟 *SERAG FRAGRANCES*`;
     } else {
       msg += `✨ *New Order - SERAG FRAGRANCES* ✨
 `;

@@ -531,7 +531,7 @@ class Serag3DHero {
 
   orderOnWhatsApp() {
     const text = encodeURIComponent(
-      `مرحباً سراج للعطور، أرغب في طلب عطر (9 PM Night Out - Extrait de Parfum 100ml) بسعر 1850 ج.م.`
+      `مرحباً، أرغب في طلب عطر (9 PM Night Out - Extrait de Parfum 100ml) بسعر 1850 ج.م.`
     );
     window.open(`https://wa.me/201025996069?text=${text}`, '_blank');
   }

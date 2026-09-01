@@ -60,22 +60,22 @@ class SeragAdmin {
 
   updateStats() {
     const totalCountEl = document.getElementById('stat-total-products');
-    const dokhoonyCountEl = document.getElementById('stat-dokhoony-products');
-    const abraaqCountEl = document.getElementById('stat-abraaq-products');
+    const dkhoniCountEl = document.getElementById('stat-dkhoni-products');
+    const ibraqCountEl = document.getElementById('stat-ibraq-products');
     const totalValueEl = document.getElementById('stat-total-value');
     const totalStockUnitsEl = document.getElementById('stat-total-stock');
 
     const totalCount = this.products.length;
-    const dokhoonyCount = this.products.filter(p => p.category === 'dokhoony').length;
-    const abraaqCount = this.products.filter(p => p.category === 'abraaq' || p.category === 'special').length;
+    const dkhoniCount = this.products.filter(p => p.category === 'dkhoni').length;
+    const ibraqCount = this.products.filter(p => p.category === 'ibraq' || p.category === 'special').length;
     
     // Total retail value calculation (Price * Stock count)
     const totalValue = this.products.reduce((sum, p) => sum + (p.price * (p.stockCount || 20)), 0);
     const totalUnits = this.products.reduce((sum, p) => sum + (p.stockCount || 20), 0);
 
     if (totalCountEl) totalCountEl.textContent = totalCount;
-    if (dokhoonyCountEl) dokhoonyCountEl.textContent = dokhoonyCount;
-    if (abraaqCountEl) abraaqCountEl.textContent = abraaqCount;
+    if (dkhoniCountEl) dkhoniCountEl.textContent = dkhoniCount;
+    if (ibraqCountEl) ibraqCountEl.textContent = ibraqCount;
     if (totalValueEl) totalValueEl.textContent = totalValue.toLocaleString() + ' EGP';
     if (totalStockUnitsEl) totalStockUnitsEl.textContent = totalUnits.toLocaleString() + ' قطعة';
   }
@@ -131,7 +131,7 @@ class SeragAdmin {
             </div>
           </td>
           <td class="px-4 py-3">
-            <span class="px-2.5 py-1 text-xs rounded-full ${p.category === 'dokhoony' ? 'bg-[#0A192F] text-white' : 'bg-[#0A192F] text-white'} font-semibold">
+            <span class="px-2.5 py-1 text-xs rounded-full ${p.category === 'dkhoni' ? 'bg-[#0A192F] text-white' : 'bg-[#0A192F] text-white'} font-semibold">
               ${p.categoryNameAr || p.category}
             </span>
           </td>
@@ -186,7 +186,7 @@ class SeragAdmin {
     // Pre-fill inputs
     document.getElementById('prod-name-en').value = product.nameEn || '';
     document.getElementById('prod-name-ar').value = product.nameAr || '';
-    document.getElementById('prod-category').value = product.category || 'dokhoony';
+    document.getElementById('prod-category').value = product.category || 'dkhoni';
     document.getElementById('prod-price').value = product.price || 1700;
     document.getElementById('prod-volume').value = product.volume || '100ml / 3.4 fl oz';
     document.getElementById('prod-family').value = product.scentFamily || '';
@@ -222,7 +222,7 @@ class SeragAdmin {
         inStock: true,
         image: `assets/images/${slug}.png`,
         customImage: null,
-        themeColor: formData.category === 'dokhoony' ? '#D4AF37' : '#0A192F',
+        themeColor: formData.category === 'dkhoni' ? '#D4AF37' : '#0A192F',
         shape: 'shine',
         ...formData
       };
@@ -363,8 +363,8 @@ class SeragAdmin {
           nameEn: document.getElementById('prod-name-en').value,
           nameAr: document.getElementById('prod-name-ar').value,
           category: categoryVal,
-          categoryNameEn: categoryVal === 'dokhoony' ? 'Dokhoony Collection' : (categoryVal === 'abraaq' ? 'Abraaq Collection' : 'Special Gift Sets'),
-          categoryNameAr: categoryVal === 'dokhoony' ? 'قسم دخوني' : (categoryVal === 'abraaq' ? 'قسم أبرق' : 'المجموعات الخاصة'),
+          categoryNameEn: categoryVal === 'dkhoni' ? 'Dkhoni Collection' : (categoryVal === 'ibraq' ? 'IBRAQ Collection' : 'Special Gift Sets'),
+          categoryNameAr: categoryVal === 'dkhoni' ? 'قسم دخوني' : (categoryVal === 'ibraq' ? 'قسم أبرق' : 'المجموعات الخاصة'),
           price: parseFloat(document.getElementById('prod-price').value) || 1700,
           volume: document.getElementById('prod-volume').value,
           scentFamily: document.getElementById('prod-family').value,
