@@ -287,7 +287,7 @@ Please confirm availability and delivery. Thank you!`;
 `;
       msg += `━━━━━━━━━━━━━━━━━━━━━
 `;
-      msg += `🌟 *سراج للعطور - عطرك لا ينطفئ*`;
+      msg += `🌟 *سراج للعطور - SERAG FRAGRANCES*`;
     } else {
       msg += `✨ *New Order - SERAG FRAGRANCES* ✨
 `;
