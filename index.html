@@ -70,8 +70,9 @@
       </a>
 
       <!-- Desktop Navigation Links (Clean: No prices in category names) -->
-      <nav class="hidden lg:flex items-center gap-7 font-bold text-sm text-[#0A192F]">
+      <nav class="hidden lg:flex items-center gap-6 font-bold text-sm text-[#0A192F]">
         <a href="#hero" class="hover:text-[#001428] transition" data-i18n-ar="الرئيسية" data-i18n-en="Home">الرئيسية</a>
+        <a href="#catalog" onclick="window.seragApp.currentCategory='afnan'; window.seragApp.renderProductsGrid();" class="hover:text-[#001428] transition font-extrabold" data-i18n-ar="قسم AFNAN" data-i18n-en="AFNAN">قسم AFNAN</a>
         <a href="#catalog" onclick="window.seragApp.currentCategory='rasasi'; window.seragApp.renderProductsGrid();" class="hover:text-[#001428] transition font-extrabold" data-i18n-ar="قسم الرصاصي" data-i18n-en="Rasasi">قسم الرصاصي</a>
         <a href="#catalog" onclick="window.seragApp.currentCategory='dkhoni'; window.seragApp.renderProductsGrid();" class="hover:text-[#001428] transition" data-i18n-ar="قسم دخوني" data-i18n-en="Dkhoni">قسم دخوني</a>
         <a href="#catalog" onclick="window.seragApp.currentCategory='ibraq'; window.seragApp.renderProductsGrid();" class="hover:text-[#001428] transition" data-i18n-ar="قسم أبرق" data-i18n-en="IBRAQ">قسم أبرق</a>
@@ -201,8 +202,8 @@
         <h2 class="text-3xl sm:text-4xl font-black text-[#0A192F] mb-3" data-i18n-ar="كتالوج العطور الفاخرة" data-i18n-en="Luxury Fragrance Catalog">
           كتالوج العطور الفاخرة
         </h2>
-        <p class="text-[#162C4E] text-sm sm:text-base font-medium" data-i18n-ar="تصفح مجموعاتنا الحصرية من قسم الرصاصي وقسم دخوني وقسم أبرق والبوكسات الملكية." data-i18n-en="Explore our exclusive collections: Rasasi, Dkhoni, IBRAQ, and Master Gift Sets.">
-          تصفح مجموعاتنا الحصرية من قسم الرصاصي وقسم دخوني وقسم أبرق والبوكسات الملكية.
+        <p class="text-[#162C4E] text-sm sm:text-base font-medium" data-i18n-ar="تصفح مجموعاتنا الحصرية من قسم AFNAN وقسم الرصاصي وقسم دخوني وقسم أبرق والبوكسات الملكية." data-i18n-en="Explore our exclusive collections: AFNAN, Rasasi, Dkhoni, IBRAQ, and Master Gift Sets.">
+          تصفح مجموعاتنا الحصرية من قسم AFNAN وقسم الرصاصي وقسم دخوني وقسم أبرق والبوكسات الملكية.
         </p>
       </div>
 
@@ -210,6 +211,9 @@
       <div class="flex flex-wrap items-center justify-center gap-3 mb-8">
         <button data-cat="all" class="cat-filter-btn filter-pill active">
           <span data-i18n-ar="جميع العطور" data-i18n-en="All Fragrances">جميع العطور</span>
+        </button>
+        <button data-cat="afnan" class="cat-filter-btn filter-pill">
+          <span data-i18n-ar="قسم AFNAN" data-i18n-en="AFNAN">قسم AFNAN</span>
         </button>
         <button data-cat="rasasi" class="cat-filter-btn filter-pill">
           <span data-i18n-ar="قسم الرصاصي" data-i18n-en="Rasasi">قسم الرصاصي</span>
@@ -496,7 +500,19 @@
           </div>
         </div>
 
-        <!-- Col 2: Rasasi Highlights -->
+        <!-- Col 2: AFNAN Highlights -->
+        <div>
+          <h4 class="font-bold text-sm text-white uppercase tracking-wider mb-4" data-i18n-ar="قسم AFNAN" data-i18n-en="AFNAN Section">قسم AFNAN</h4>
+          <ul class="space-y-2 text-xs text-[#162C4E]">
+            <li><a href="#catalog" onclick="window.seragApp.currentCategory='afnan'; window.seragApp.renderProductsGrid();" class="hover:text-white transition">9 PM Night Out</a></li>
+            <li><a href="#catalog" onclick="window.seragApp.currentCategory='afnan'; window.seragApp.renderProductsGrid();" class="hover:text-white transition">9 PM Original (الأسود)</a></li>
+            <li><a href="#catalog" onclick="window.seragApp.currentCategory='afnan'; window.seragApp.renderProductsGrid();" class="hover:text-white transition">9 PM Rebel</a></li>
+            <li><a href="#catalog" onclick="window.seragApp.currentCategory='afnan'; window.seragApp.renderProductsGrid();" class="hover:text-white transition">9 PM Elixir</a></li>
+            <li><a href="#catalog" onclick="window.seragApp.currentCategory='afnan'; window.seragApp.renderProductsGrid();" class="hover:text-white transition">9 AM Dive</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Rasasi Highlights -->
         <div>
           <h4 class="font-bold text-sm text-white uppercase tracking-wider mb-4" data-i18n-ar="قسم الرصاصي" data-i18n-en="Rasasi Section">قسم الرصاصي</h4>
           <ul class="space-y-2 text-xs text-[#162C4E]">
@@ -508,7 +524,7 @@
           </ul>
         </div>
 
-        <!-- Col 3: Dkhoni Highlights -->
+        <!-- Col 4: Dkhoni Highlights -->
         <div>
           <h4 class="font-bold text-sm text-white uppercase tracking-wider mb-4" data-i18n-ar="قسم دخوني" data-i18n-en="Dkhoni Section">قسم دخوني</h4>
           <ul class="space-y-2 text-xs text-[#162C4E]">
@@ -516,23 +532,21 @@
             <li><a href="#catalog" class="hover:text-white transition">Shiny (شايني)</a></li>
             <li><a href="#catalog" class="hover:text-white transition">La Bella (لا بيلا)</a></li>
             <li><a href="#catalog" class="hover:text-white transition">Khayal (خيال)</a></li>
-            <li><a href="#catalog" class="hover:text-white transition">Zayed (زايد)</a></li>
           </ul>
         </div>
 
-        <!-- Col 4: IBRAQ Highlights -->
+        <!-- Col 5: IBRAQ Highlights -->
         <div>
           <h4 class="font-bold text-sm text-white uppercase tracking-wider mb-4" data-i18n-ar="قسم أبرق" data-i18n-en="IBRAQ Section">قسم أبرق</h4>
           <ul class="space-y-2 text-xs text-[#162C4E]">
             <li><a href="#catalog" class="hover:text-white transition">French Tobacco (فرينش توباكو)</a></li>
             <li><a href="#catalog" class="hover:text-white transition">Arabian Tobacco (اريبان توباكو)</a></li>
             <li><a href="#catalog" class="hover:text-white transition">Emerald Soul (ايمرلد سول)</a></li>
-            <li><a href="#catalog" class="hover:text-white transition">Black Diamond Incense</a></li>
             <li><a href="#catalog" class="hover:text-white transition">Diamond Box (بوكس الدايموند)</a></li>
           </ul>
         </div>
 
-        <!-- Col 5: Quick Links & Admin -->
+        <!-- Col 6: Quick Links & Admin -->
         <div>
           <h4 class="font-bold text-sm text-white uppercase tracking-wider mb-4" data-i18n-ar="روابط سريعة" data-i18n-en="Quick Links">روابط سريعة</h4>
           <ul class="space-y-2 text-xs text-[#162C4E]">
