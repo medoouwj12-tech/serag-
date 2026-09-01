@@ -126,6 +126,11 @@ class SeragApp {
     const countEl = document.getElementById('products-count-label');
     if (!grid) return;
 
+    // Sync active category button in UI
+    document.querySelectorAll('.cat-filter-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-cat') === this.currentCategory);
+    });
+
     const list = this.getFilteredProducts();
     const isRtl = this.currentLang === 'ar';
 
