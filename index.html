@@ -46,14 +46,59 @@
 
 <body class="bg-white text-[#0A192F] selection:bg-[#0A192F] selection:text-[#0A192F]">
 
-  <!-- 1. Top Announcement Bar -->
-  <div class="bg-[#0A192F] text-white py-2.5 px-4 text-xs sm:text-sm text-center font-bold tracking-wide border-b border-white/10 flex items-center justify-center gap-2">
-    <span>✨</span>
+    <!-- 1. Top Announcement Bar -->
+  <div class="bg-[#0A192F] text-white py-2 px-4 text-xs sm:text-sm text-center font-bold tracking-wide border-b border-white/10 flex items-center justify-center gap-2">
     <span data-i18n-ar="توصيل فاخر وسريع لجميع محافظات مصر • تغليف هدايا ملكي مجاني لجميع الطلبات" data-i18n-en="Free Luxury Gift Packaging & Fast Delivery Across All Egypt Governorates">
       توصيل فاخر وسريع لجميع محافظات مصر • تغليف هدايا ملكي مجاني لجميع الطلبات
     </span>
-    <span class="hidden sm:inline">✨</span>
   </div>
+
+  <!-- 2. Sticky Navigation Header -->
+  <header class="sticky top-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="custom-logo-box shrink-0 group-hover:scale-105 transition-transform duration-300">
+          <img src="logo.jpeg" alt="SERAG FRAGRANCES" class="w-full h-full object-cover" />
+        </div>
+        <div class="flex flex-col">
+          <span class="font-heading font-black text-lg sm:text-xl tracking-wider text-[#0A192F] flex items-center gap-1.5">
+            SERAG <span class="font-normal">FRAGRANCES</span>
+          </span>
+          <span class="text-[11px] text-[#162C4E] font-bold tracking-widest font-arabic -mt-0.5">سراج للعطور</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links (Clean: No prices in category names) -->
+      <nav class="hidden lg:flex items-center gap-8 font-bold text-sm text-[#0A192F]">
+        <a href="#hero" class="hover:text-[#001428] transition" data-i18n-ar="الرئيسية" data-i18n-en="Home">الرئيسية</a>
+        <a href="#catalog" onclick="window.seragApp.currentCategory='dokhoony'; window.seragApp.renderProductsGrid();" class="hover:text-[#001428] transition" data-i18n-ar="قسم دخوني" data-i18n-en="Dokhoony">قسم دخوني</a>
+        <a href="#catalog" onclick="window.seragApp.currentCategory='abraaq'; window.seragApp.renderProductsGrid();" class="hover:text-[#001428] transition" data-i18n-ar="قسم أبرق" data-i18n-en="Abraaq">قسم أبرق</a>
+        <a href="#special-sets" class="hover:text-[#001428] transition font-extrabold" data-i18n-ar="البوكسات الملكية" data-i18n-en="Royal Boxes">البوكسات الملكية</a>
+        <a href="#location" class="hover:text-[#001428] transition" data-i18n-ar="موقع المتجر" data-i18n-en="Store Location">موقع المتجر</a>
+        <a href="admin.html" class="hover:text-[#001428] transition px-3 py-1 rounded-full bg-[#F0F5FA] text-xs font-bold text-[#0A192F]" data-i18n-ar="لوحة التحكم" data-i18n-en="Admin Dashboard">لوحة التحكم ⚙️</a>
+      </nav>
+
+      <!-- Header Action Controls -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button onclick="window.seragApp.toggleLanguage()" class="lang-toggle-btn px-3 py-1.5 rounded-full border border-[#0A192F]/20 text-xs font-bold text-[#0A192F] hover:border-[#0A192F] hover:bg-[#F0F5FA] transition">
+          English
+        </button>
+
+        <a href="https://wa.me/201025996069?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%B3%D8%B1%D8%A7%D8%AC%20%D9%84%D9%84%D8%B9%D8%B7%D9%88%D8%B1" 
+           target="_blank" 
+           class="btn-whatsapp hidden sm:flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold shadow-sm">
+          <span>+201025996069</span>
+        </a>
+
+        <!-- Cart Drawer Toggle Button -->
+        <button class="cart-drawer-toggle relative p-2.5 rounded-xl bg-[#0A192F] text-white hover:bg-[#001428] transition shadow-md flex items-center justify-center cursor-pointer" title="سلة المشتريات">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+          <span class="cart-count-badge hidden absolute -top-1.5 -right-1.5 w-5 h-5 bg-white text-[#0A192F] font-black text-xs rounded-full flex items-center justify-center border-2 border-[#0A192F] transition-all duration-300">0</span>
+        </button>
+      </div>
+    </div>
   </header>
 
   <!-- 3. Hero Section with 3D WebGL Perfume Bottle -->
@@ -78,53 +123,7 @@
             ابتكار عطري ملكي يجمع أندر خلاصات العود والبخور ودهن الورد والتوباكو العالمي الفاخر. صُممت كل قطرة لتترك أثراً استثنائياً لا يُمحى.
           </p>
 
-          <!-- 3D Bottle Style Switcher Pills -->
-          <div class="pt-2">
-            <div class="text-xs font-bold text-[#162C4E] mb-2 uppercase tracking-wider" data-i18n-ar="اختر تجربة الزجاجة ثلاثية الأبعاد (3D):" data-i18n-en="Select 3D Bottle Edition:">
-              اختر تجربة الزجاجة ثلاثية الأبعاد (3D):
-            </div>
-            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2">
-              <button data-theme="dokhoony" class="hero-theme-pill px-4 py-2 rounded-full border border-[#0A192F]/15 text-xs font-bold bg-[#0A192F] text-white text-[#0A192F] shadow-sm transition">
-                💎 Dokhoony Crystal
-              </button>
-              <button data-theme="abraaq" class="hero-theme-pill px-4 py-2 rounded-full border border-slate-300 text-xs font-bold bg-white text-[#002B49] hover:border-[#0A192F] transition">
-                🌌 Abraaq Sapphire Blue
-              </button>
-              <button data-theme="diamond" class="hero-theme-pill px-4 py-2 rounded-full border border-slate-300 text-xs font-bold bg-white text-[#002B49] hover:border-[#0A192F] transition">
-                ✨ Royal Diamond
-              </button>
-              <button data-theme="tobacco" class="hero-theme-pill px-4 py-2 rounded-full border border-slate-300 text-xs font-bold bg-white text-[#002B49] hover:border-[#0A192F] transition">
-                🍂 Tobacco Master
-              </button>
-            </div>
-          </div>
-
-          <!-- Hero Action CTAs -->
-          <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-4">
-            <a href="#catalog" onclick="window.seragApp.currentCategory='dokhoony'; window.seragApp.renderProductsGrid();" class="btn-serag-primary px-8 py-4 rounded-full font-bold text-sm shadow-xl flex items-center gap-2">
-              <span data-i18n-ar="استكشف قسم دخوني (١,٧٠٠ ج.م)" data-i18n-en="Explore Dokhoony (1,700 EGP)">استكشف قسم دخوني (١,٧٠٠ ج.م)</span>
-            </a>
-
-            <a href="#catalog" onclick="window.seragApp.currentCategory='abraaq'; window.seragApp.renderProductsGrid();" class="btn-serag-gold px-8 py-4 rounded-full font-bold text-sm shadow-xl flex items-center gap-2">
-              <span data-i18n-ar="استكشف قسم أبرق (١,٨٥٠ ج.م)" data-i18n-en="Explore Abraaq (1,850 EGP)">استكشف قسم أبرق (١,٨٥٠ ج.م)</span>
-            </a>
-          </div>
-
-          <!-- Trust Badges -->
-          <div class="pt-6 grid grid-cols-3 gap-4 border-t border-[#0A192F]/15 max-w-xl mx-auto lg:mx-0 text-center">
-            <div>
-              <div class="text-xl font-black text-[#0A192F]">45+</div>
-              <div class="text-xs text-[#162C4E] font-medium" data-i18n-ar="عطر ملكي أصلي" data-i18n-en="Luxury Fragrances">عطر ملكي أصلي</div>
-            </div>
-            <div>
-              <div class="text-xl font-black text-[#0A192F]">100%</div>
-              <div class="text-xs text-[#162C4E] font-medium" data-i18n-ar="ثبات وفوحان فائق" data-i18n-en="Long Lasting">ثبات وفوحان فائق</div>
-            </div>
-            <div>
-              <div class="text-xl font-black text-[#0A192F]">24/7</div>
-              <div class="text-xs text-[#162C4E] font-medium" data-i18n-ar="توصيل لجميع المحافظات" data-i18n-en="Express Delivery">توصيل لجميع المحافظات</div>
-            </div>
-          </div>
+          
 
         </div>
 
@@ -202,24 +201,24 @@
         <h2 class="text-3xl sm:text-4xl font-black text-[#0A192F] mb-3" data-i18n-ar="كتالوج العطور الفاخرة" data-i18n-en="Luxury Fragrance Catalog">
           كتالوج العطور الفاخرة
         </h2>
-        <p class="text-[#162C4E] text-sm sm:text-base font-medium" data-i18n-ar="تصفح مجموعاتنا الحصرية من قسم دخوني (١,٧٠٠ ج.م) وقسم أبرق (١,٨٥٠ ج.م) والبوكسات الملكية." data-i18n-en="Explore our exclusive collections: Dokhoony (1,700 EGP), Abraaq (1,850 EGP), and Master Gift Sets.">
-          تصفح مجموعاتنا الحصرية من قسم دخوني (١,٧٠٠ ج.م) وقسم أبرق (١,٨٥٠ ج.م) والبوكسات الملكية.
+        <p class="text-[#162C4E] text-sm sm:text-base font-medium" data-i18n-ar="تصفح مجموعاتنا الحصرية من قسم دخوني وقسم أبرق والبوكسات الملكية." data-i18n-en="Explore our exclusive collections: Dokhoony, Abraaq, and Master Gift Sets.">
+          تصفح مجموعاتنا الحصرية من قسم دخوني وقسم أبرق والبوكسات الملكية.
         </p>
       </div>
 
       <!-- Main Category Tabs -->
       <div class="flex flex-wrap items-center justify-center gap-3 mb-8">
         <button data-cat="all" class="cat-filter-btn filter-pill active">
-          <span data-i18n-ar="✨ جميع العطور (٤٥+ عطر)" data-i18n-en="✨ All Fragrances (45+)">✨ جميع العطور (٤٥+ عطر)</span>
+          <span data-i18n-ar="جميع العطور" data-i18n-en="All Fragrances">جميع العطور</span>
         </button>
         <button data-cat="dokhoony" class="cat-filter-btn filter-pill">
-          <span data-i18n-ar="⚜️ قسم دخوني (١,٧٠٠ ج.م)" data-i18n-en="⚜️ Dokhoony (1,700 EGP)">⚜️ قسم دخوني (١,٧٠٠ ج.م)</span>
+          <span data-i18n-ar="قسم دخوني" data-i18n-en="Dokhoony">قسم دخوني</span>
         </button>
         <button data-cat="abraaq" class="cat-filter-btn filter-pill">
-          <span data-i18n-ar="💎 قسم أبرق (١,٨٥٠ ج.م)" data-i18n-en="💎 Abraaq (1,850 EGP)">💎 قسم أبرق (١,٨٥٠ ج.م)</span>
+          <span data-i18n-ar="قسم أبرق" data-i18n-en="Abraaq">قسم أبرق</span>
         </button>
         <button data-cat="special" class="cat-filter-btn filter-pill">
-          <span data-i18n-ar="🎁 البوكسات والمجموعات الملكية" data-i18n-en="🎁 Royal Sets & Boxes">🎁 البوكسات والمجموعات الملكية</span>
+          <span data-i18n-ar="البوكسات الملكية" data-i18n-en="Royal Sets & Boxes">البوكسات الملكية</span>
         </button>
       </div>
 
@@ -659,5 +658,14 @@
   <script src="js/three-hero.js"></script>
   <script src="js/cart.js"></script>
   <script src="js/app.js"></script>
+
+  <!-- Floating Cart Button for Mobile & Desktop -->
+  <button onclick="window.seragCart.toggleDrawer(true)" 
+          class="fixed bottom-6 right-6 z-40 p-3.5 rounded-full bg-[#0A192F] text-white shadow-2xl hover:scale-110 transition-all border-2 border-white flex items-center justify-center cursor-pointer"
+          title="سلة المشتريات">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+    <span class="cart-count-badge hidden absolute -top-1 -right-1 w-5 h-5 bg-white text-[#0A192F] font-black text-xs rounded-full flex items-center justify-center border-2 border-[#0A192F]">0</span>
+  </button>
+
 </body>
 </html>

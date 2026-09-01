@@ -31,7 +31,7 @@ class Serag3DHero {
         slug: 'crown-black',
         nameAr: 'كراون بلاك',
         nameEn: 'Crown Black',
-        categoryAr: 'قسم دخوني (١,٧٠٠ ج.م)',
+        categoryAr: 'قسم دخوني',
         price: 1700,
         image: 'assets/images/crown-black.jpg',
         liquidColor: 0x111625,
@@ -44,7 +44,7 @@ class Serag3DHero {
         slug: 'shiny',
         nameAr: 'شايني',
         nameEn: 'Shiny',
-        categoryAr: 'قسم دخوني (١,٧٠٠ ج.م)',
+        categoryAr: 'قسم دخوني',
         price: 1700,
         image: 'assets/images/shiny.jpg',
         liquidColor: 0xDF8C96,
@@ -57,7 +57,7 @@ class Serag3DHero {
         slug: 'emerald-soul',
         nameAr: 'ايمرلد سول',
         nameEn: 'Emerald Soul',
-        categoryAr: 'قسم أبرق (١,٨٥٠ ج.م)',
+        categoryAr: 'قسم أبرق',
         price: 1850,
         image: 'assets/images/emerald-soul.jpeg',
         liquidColor: 0x0F5257,
@@ -70,7 +70,7 @@ class Serag3DHero {
         slug: 'french-tobacco',
         nameAr: 'فرينش توباكو',
         nameEn: 'French Tobacco',
-        categoryAr: 'قسم أبرق (١,٨٥٠ ج.م)',
+        categoryAr: 'قسم أبرق',
         price: 1850,
         image: 'assets/images/french-tobacco.jpg',
         liquidColor: 0x6E3B1B,
@@ -83,7 +83,7 @@ class Serag3DHero {
         slug: 'diamond-collection',
         nameAr: 'دايموند كوليكشن',
         nameEn: 'Diamond Collection',
-        categoryAr: 'البوكسات الملكية (٢,٦٠٠ ج.م)',
+        categoryAr: 'البوكسات الملكية',
         price: 2600,
         image: 'assets/images/diamond-collection-blue-red-white.jpg',
         liquidColor: 0x0A192F,
@@ -96,7 +96,7 @@ class Serag3DHero {
         slug: 'blue-diamond-aqua',
         nameAr: 'بلو دايموند اكوا',
         nameEn: 'Blue Diamond Aqua',
-        categoryAr: 'قسم أبرق (١,٨٥٠ ج.م)',
+        categoryAr: 'قسم أبرق',
         price: 1850,
         image: 'assets/images/blue-diamond-aqua.jpg',
         liquidColor: 0x0B4F6C,
@@ -431,15 +431,15 @@ class Serag3DHero {
             <img id="hero-3d-thumb" src="${this.showcaseProducts[0].image}" alt="Perfume" class="w-full h-full object-contain" />
           </div>
           <div>
-            <div id="hero-3d-title" class="font-bold text-sm text-white font-bold font-arabic">كراون بلاك • Crown Black</div>
-            <div id="hero-3d-sub" class="text-[11px] text-slate-400">قسم دخوني (١,٧٠٠ ج.م)</div>
+            <div id="hero-3d-title" class="font-bold text-sm text-white font-bold font-arabic">كراون بلاك</div>
+            <div id="hero-3d-sub" class="text-[11px] text-slate-400">قسم دخوني</div>
           </div>
         </div>
         <div class="flex items-center gap-2">
           <button id="hero-3d-order-btn" 
                   onclick="window.seragCart ? window.seragCart.orderSingleOnWhatsApp(window.seragApp.getProductById(window.seragHero3D.showcaseProducts[window.seragHero3D.currentIndex].id)) : null" 
                   class="btn-whatsapp px-3 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5 shadow-md">
-            <span>طلب واتساب ⚡</span>
+            <span>طلب عبر واتساب</span>
           </button>
         </div>
       </div>
