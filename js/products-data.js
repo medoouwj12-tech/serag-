@@ -3,9 +3,33 @@
  * All Authentic Products, High-Resolution Real Product Images & Verified Pricing
  */
 
-const SERAG_CATALOG_VERSION = "v2_serag_real_images_2026_09";
+const SERAG_CATALOG_VERSION = "v3_serag_9pm_night_out_2026_09";
 
 const DEFAULT_PRODUCTS = [
+  {
+    "id": 0,
+    "slug": "9pm-night-out",
+    "nameEn": "9 PM Night Out",
+    "nameAr": "9 بي إم نايت أوت",
+    "category": "dokhoony",
+    "categoryNameEn": "Dokhoony Royal Collection",
+    "categoryNameAr": "قسم دخوني الملكي",
+    "price": 1850,
+    "volume": "100ml / 3.4 fl oz",
+    "scentFamily": "Spicy Amber & Smoky Vanilla (توباكو وعنبر دافئ وفانيلا)",
+    "topNotes": "Apple, Cinnamon, Wild Lavender, Bergamot",
+    "heartNotes": "Orange Blossom, Lily of the Valley",
+    "baseNotes": "Madagascar Vanilla, Tonka Bean, Amber, Patchouli",
+    "shape": "black",
+    "badge": "3D Hero Special",
+    "themeColor": "#0A192F",
+    "rating": 5.0,
+    "reviewsCount": 84,
+    "inStock": true,
+    "stockCount": 60,
+    "image": "assets/images/9pm-night-out.webp",
+    "customImage": null
+  },
   {
     "id": 1,
     "slug": "shiny",
