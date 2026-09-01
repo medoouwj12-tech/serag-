@@ -3,7 +3,7 @@
  * All Authentic Products, High-Resolution Real Product Images & Verified Pricing
  */
 
-const SERAG_CATALOG_VERSION = "v8_serag_afnan_extended_2026_09";
+const SERAG_CATALOG_VERSION = "v9_serag_afnan_prices_updated_2026_09";
 
 const DEFAULT_PRODUCTS = [
   {
@@ -38,7 +38,7 @@ const DEFAULT_PRODUCTS = [
       "category": "afnan",
       "categoryNameEn": "AFNAN Collection",
       "categoryNameAr": "قسم أفنان",
-      "price": 1850,
+      "price": 1750,
       "volume": "100ml / 3.4 fl oz",
       "scentFamily": "Amber Spicy & Sweet Vanilla (فانيلا حلوة وعنبر وقرفة)",
       "topNotes": "Apple, Cinnamon, Wild Lavender, Bergamot",
@@ -86,7 +86,7 @@ const DEFAULT_PRODUCTS = [
       "category": "afnan",
       "categoryNameEn": "AFNAN Collection",
       "categoryNameAr": "قسم أفنان",
-      "price": 1850,
+      "price": 1800,
       "volume": "100ml / 3.4 fl oz",
       "scentFamily": "Intense Warm Amber & Spices (عنبر مركز وتوابل دافئة)",
       "topNotes": "Nutmeg, Cinnamon, Cardamom, Grapefruit",
@@ -110,7 +110,7 @@ const DEFAULT_PRODUCTS = [
       "category": "afnan",
       "categoryNameEn": "AFNAN Collection",
       "categoryNameAr": "قسم أفنان",
-      "price": 1850,
+      "price": 1800,
       "volume": "100ml / 3.4 fl oz",
       "scentFamily": "Fresh Citrus & Aromatic Spices (حمضيات صباحية منعشة وهيل)",
       "topNotes": "Mandarin Orange, Lemon, Cardamom, Pink Pepper",
