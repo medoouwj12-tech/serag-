@@ -160,7 +160,7 @@ class SeragApp {
 
     grid.innerHTML = list.map(product => {
       const badgeClass = 'badge-serag';
-      const badgeText = product.badge || (product.category === 'dkhoni' ? 'Dkhoni' : (product.category === 'almas' ? 'ALMAS' : 'IBRAQ'));
+      const badgeText = product.badge || (product.category === 'dkhoni' ? 'Dkhoni' : (product.category === 'almas' ? 'ALMAS' : (product.category === 'lebonheur' ? 'Le Bonheur' : 'IBRAQ')));
 
       return `
         <div class="glass-card rounded-2xl p-5 relative flex flex-col justify-between group transition-all duration-300 card-tilt-container">
