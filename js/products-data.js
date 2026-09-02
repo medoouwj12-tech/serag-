@@ -1234,7 +1234,7 @@ const DEFAULT_PRODUCTS = [
     "reviewsCount": 42,
     "inStock": true,
     "stockCount": 40,
-    "image": null,
+    "image": "assets/images/aura.png",
     "customImage": null
   },
   {
