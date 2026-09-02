@@ -178,11 +178,7 @@ class Serag3DHero {
     ctx.fillStyle = '#EDEDF2';
     ctx.shadowColor = 'rgba(0,0,0,0.85)';
     ctx.shadowBlur = 14;
-    ctx.fillText('AFNAN', 512, 410);
-
-    ctx.font = '600 28px "Plus Jakarta Sans", sans-serif';
-    ctx.fillStyle = '#A0A7B4';
-    ctx.fillText('HAUTE PARFUMERIE', 512, 470);
+    ctx.fillText('AFNAN', 512, 430);
 
     // Divider Line
     ctx.lineWidth = 3;

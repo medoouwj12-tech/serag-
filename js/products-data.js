@@ -946,7 +946,7 @@ const DEFAULT_PRODUCTS = [
   },
 
   /* ==========================================================================
-     FAAN COLLECTION (FAAN Haute Parfumerie - 200ml - Unified Price 2,500 EGP)
+     FAAN COLLECTION (200ml - Unified Price 2,500 EGP)
      ========================================================================== */
   {
       "id": 201,
