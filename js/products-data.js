@@ -3,7 +3,7 @@
  * All Authentic Products, High-Resolution Real Product Images & Verified Pricing
  */
 
-const SERAG_CATALOG_VERSION = "v14_serag_rasasi_shuhrah_2026_09";
+const SERAG_CATALOG_VERSION = "v15_serag_rasasi_daarej_2026_09";
 
 const DEFAULT_PRODUCTS = [
   {
@@ -1042,6 +1042,106 @@ const DEFAULT_PRODUCTS = [
       "inStock": true,
       "stockCount": 45,
       "image": "assets/images/shuhrah-avenoir-pour-homme.jpg",
+      "customImage": null
+  },
+
+  /* ==========================================================================
+     RASASI DAAREJ COLLECTION (100ml - Unified Price 1,400 EGP)
+     ========================================================================== */
+  {
+      "id": 117,
+      "slug": "rasasi-daarej-pour-homme",
+      "nameEn": "Rasasi Daarej Pour Homme",
+      "nameAr": "دارج للرجال (الأصلي)",
+      "category": "rasasi",
+      "categoryNameEn": "Rasasi Collection",
+      "categoryNameAr": "قسم الرصاصي",
+      "price": 1400,
+      "volume": "100ml / 3.4 fl oz",
+      "scentFamily": "Oriental Spicy & Sweet Amber (توابل شرقية دافئة وفانيلا وعنبر)",
+      "topNotes": "Cardamom, Cumin, Artemisia",
+      "heartNotes": "Rose, Orris Root",
+      "baseNotes": "Vanilla, Tonka Bean, Amber, Sandalwood, Patchouli, Musk",
+      "shape": "purple",
+      "badge": "Worldwide Legend",
+      "themeColor": "#5B2C6F",
+      "rating": 5.0,
+      "reviewsCount": 115,
+      "inStock": true,
+      "stockCount": 60,
+      "image": "assets/images/daarej-pour-homme.jpg",
+      "customImage": null
+  },
+  {
+      "id": 118,
+      "slug": "rasasi-daarej-pour-femme",
+      "nameEn": "Rasasi Daarej Pour Femme",
+      "nameAr": "دارج للنساء (الأصلي)",
+      "category": "rasasi",
+      "categoryNameEn": "Rasasi Collection",
+      "categoryNameAr": "قسم الرصاصي",
+      "price": 1400,
+      "volume": "100ml / 3.4 fl oz",
+      "scentFamily": "Floral Fruity Gourmand (زهور أنثوية وفواكه ناعمة وكراميل)",
+      "topNotes": "Peach, Orange, Green Accord",
+      "heartNotes": "Heliotrope, Orchid, Tuberose, Jasmine, Lily of the Valley",
+      "baseNotes": "Caramel, Vanilla, Amber, Sandalwood, Musk",
+      "shape": "rose",
+      "badge": "Pour Femme",
+      "themeColor": "#8E44AD",
+      "rating": 4.9,
+      "reviewsCount": 82,
+      "inStock": true,
+      "stockCount": 50,
+      "image": "assets/images/daarej-pour-femme.jpg",
+      "customImage": null
+  },
+  {
+      "id": 119,
+      "slug": "rasasi-daarej-aurelia-pour-femme",
+      "nameEn": "Rasasi Daarej Aurelia Pour Femme",
+      "nameAr": "دارج أوريليا للنساء",
+      "category": "rasasi",
+      "categoryNameEn": "Rasasi Collection",
+      "categoryNameAr": "قسم الرصاصي",
+      "price": 1400,
+      "volume": "100ml / 3.4 fl oz",
+      "scentFamily": "Fresh Floral Bouquet & Solar Citrus (باقة زهور ربيعية منعشة وحمضيات مشرقة)",
+      "topNotes": "Red Berries, Italian Citrus, Blossom Petals",
+      "heartNotes": "Damask Rose, White Jasmine, Gardenia",
+      "baseNotes": "Soft Vanilla, White Musk, Cashmere Wood",
+      "shape": "rose",
+      "badge": "Aurelia Floral",
+      "themeColor": "#E74C3C",
+      "rating": 5.0,
+      "reviewsCount": 67,
+      "inStock": true,
+      "stockCount": 45,
+      "image": "assets/images/daarej-aurelia-pour-femme.jpg",
+      "customImage": null
+  },
+  {
+      "id": 120,
+      "slug": "rasasi-daarej-verve-pour-homme",
+      "nameEn": "Rasasi Daarej Verve Pour Homme",
+      "nameAr": "دارج فيرف للرجال",
+      "category": "rasasi",
+      "categoryNameEn": "Rasasi Collection",
+      "categoryNameAr": "قسم الرصاصي",
+      "price": 1400,
+      "volume": "100ml / 3.4 fl oz",
+      "scentFamily": "Fresh Spicy & Modern Woody (انتعاش أروماتيك حار وأخشاب عصرية)",
+      "topNotes": "Citrus Zest, Black Pepper, Bergamot",
+      "heartNotes": "Cardamom, Lavender, Nutmeg",
+      "baseNotes": "Cedarwood, Amber, Vetiver, Oakmoss",
+      "shape": "black",
+      "badge": "Modern Verve",
+      "themeColor": "#1A202C",
+      "rating": 5.0,
+      "reviewsCount": 73,
+      "inStock": true,
+      "stockCount": 50,
+      "image": "assets/images/daarej-verve-pour-homme.jpg",
       "customImage": null
   },
 
