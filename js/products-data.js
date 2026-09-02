@@ -2250,7 +2250,7 @@ const DEFAULT_PRODUCTS = [
 function getBottleSVG(product) {
   const imgSrc = product.customImage || product.image;
   
-  if (imgSrc && !imgSrc.endsWith('.svg') && !imgSrc.includes('assets/images/shiny.png') && !imgSrc.includes('assets/images/aura.png')) {
+  if (imgSrc && !imgSrc.endsWith('.svg') && !imgSrc.includes('assets/images/shiny.png')) {
     return `<div class="bottle-image-container relative w-full h-[220px] flex items-center justify-center overflow-hidden rounded-2xl p-2 bg-[#F8FAFC] dark:via-slate-900/40 dark:to-slate-950/60">
       <img src="${imgSrc}" alt="${product.nameEn}" class="bottle-real-img max-h-full max-w-full object-contain drop-shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:drop-shadow-[0_15px_25px_rgba(212,175,55,0.25)]" loading="lazy" onerror="this.parentElement.innerHTML = getFallbackBottleSVG(window.seragApp ? window.seragApp.getProductById(${product.id}) : null);" />
     </div>`;
