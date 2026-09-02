@@ -3,7 +3,7 @@
  * All Authentic Products, High-Resolution Real Product Images & Verified Pricing
  */
 
-const SERAG_CATALOG_VERSION = "v12_serag_faan_category_2026_09";
+const SERAG_CATALOG_VERSION = "v13_serag_dkhoni_updates_2026_09";
 
 const DEFAULT_PRODUCTS = [
   {
@@ -1234,7 +1234,7 @@ const DEFAULT_PRODUCTS = [
     "reviewsCount": 42,
     "inStock": true,
     "stockCount": 40,
-    "image": "assets/images/aura.png",
+    "image": "assets/images/dkhoni-aura.jpg",
     "customImage": null
   },
   {
@@ -1762,7 +1762,7 @@ const DEFAULT_PRODUCTS = [
     "reviewsCount": 68,
     "inStock": true,
     "stockCount": 50,
-    "image": "assets/images/private-2-december.jpg",
+    "image": "assets/images/dkhoni-private-2-december.jpg",
     "customImage": null
   },
   {
@@ -1789,6 +1789,55 @@ const DEFAULT_PRODUCTS = [
     "image": "assets/images/ti-amo.jpg",
     "customImage": null
   },
+  {
+      "id": 28,
+      "slug": "kahilan",
+      "nameEn": "Kahilan",
+      "nameAr": "كحيلان",
+      "category": "dkhoni",
+      "categoryNameEn": "Dkhoni Collection",
+      "categoryNameAr": "قسم دخوني",
+      "price": 1700,
+      "volume": "100ml / 3.4 fl oz",
+      "scentFamily": "Royal Amber & Woody Leather (عنبر ملكي وأخشاب شرقية)",
+      "topNotes": "Saffron, Cardamom, Bergamot",
+      "heartNotes": "Smoky Amber, Velvet Rose, Sandalwood",
+      "baseNotes": "Agarwood, White Musk, Patchouli",
+      "shape": "gold",
+      "badge": "Royal Gold",
+      "themeColor": "#D97706",
+      "rating": 5.0,
+      "reviewsCount": 65,
+      "inStock": true,
+      "stockCount": 45,
+      "image": "assets/images/dkhoni-kahilan.jpg",
+      "customImage": null
+  },
+  {
+      "id": 29,
+      "slug": "couture",
+      "nameEn": "Couture",
+      "nameAr": "كوتور",
+      "category": "dkhoni",
+      "categoryNameEn": "Dkhoni Collection",
+      "categoryNameAr": "قسم دخوني",
+      "price": 1700,
+      "volume": "100ml / 3.4 fl oz",
+      "scentFamily": "Haute Couture Velvet Woods (أخشاب فاخرة ومسك نقي)",
+      "topNotes": "Pink Pepper, White Peach, Bergamot",
+      "heartNotes": "Florentine Iris, Damask Rose, Cedarwood",
+      "baseNotes": "Cashmeran, Ambergris, Tonka Bean",
+      "shape": "black",
+      "badge": "Haute Couture",
+      "themeColor": "#475569",
+      "rating": 5.0,
+      "reviewsCount": 58,
+      "inStock": true,
+      "stockCount": 40,
+      "image": "assets/images/dkhoni-couture.jpg",
+      "customImage": null
+  },
+
   {
     "id": 28,
     "slug": "emerald-soul",
