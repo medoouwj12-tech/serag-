@@ -3,7 +3,7 @@
  * All Authentic Products, High-Resolution Real Product Images & Verified Pricing
  */
 
-const SERAG_CATALOG_VERSION = "v13_serag_dkhoni_updates_2026_09";
+const SERAG_CATALOG_VERSION = "v14_serag_rasasi_shuhrah_2026_09";
 
 const DEFAULT_PRODUCTS = [
   {
@@ -942,6 +942,106 @@ const DEFAULT_PRODUCTS = [
       "inStock": true,
       "stockCount": 40,
       "image": "assets/images/hawas-pink-for-her.jpg",
+      "customImage": null
+  },
+
+  /* ==========================================================================
+     RASASI SHUHRAH COLLECTION (90ml - Unified Price 1,650 EGP)
+     ========================================================================== */
+  {
+      "id": 113,
+      "slug": "rasasi-shuhrah-pour-homme",
+      "nameEn": "Rasasi Shuhrah Pour Homme",
+      "nameAr": "شهرة للرجال (الأصلي)",
+      "category": "rasasi",
+      "categoryNameEn": "Rasasi Collection",
+      "categoryNameAr": "قسم الرصاصي",
+      "price": 1650,
+      "volume": "90ml / 3.0 fl oz",
+      "scentFamily": "Woody Aromatic & Smoky Leather (توباكو وجلود مدخنة وعود فاخر)",
+      "topNotes": "Tomato Leaf, Freesia, Rose",
+      "heartNotes": "Rose, Sandalwood, Cedarwood, Jasmine",
+      "baseNotes": "Leather, Agarwood (Oud), Oakmoss, Amber, Musk",
+      "shape": "blue",
+      "badge": "Best Seller",
+      "themeColor": "#1C2A3A",
+      "rating": 5.0,
+      "reviewsCount": 98,
+      "inStock": true,
+      "stockCount": 50,
+      "image": "assets/images/shuhrah-pour-homme.jpg",
+      "customImage": null
+  },
+  {
+      "id": 114,
+      "slug": "rasasi-shuhrah-pour-femme",
+      "nameEn": "Rasasi Shuhrah Pour Femme",
+      "nameAr": "شهرة للنساء (الأصلي)",
+      "category": "rasasi",
+      "categoryNameEn": "Rasasi Collection",
+      "categoryNameAr": "قسم الرصاصي",
+      "price": 1650,
+      "volume": "90ml / 3.0 fl oz",
+      "scentFamily": "Chypre Floral & Warm Amber (زهور راقية وعنبر دافئ وباتشولي)",
+      "topNotes": "Lemon, Sage",
+      "heartNotes": "Florentine Iris, Jasmine, Lily of the Valley",
+      "baseNotes": "Agarwood (Oud), Patchouli, Grey Amber, Musk",
+      "shape": "gold",
+      "badge": "Pour Femme",
+      "themeColor": "#C5A880",
+      "rating": 4.9,
+      "reviewsCount": 76,
+      "inStock": true,
+      "stockCount": 45,
+      "image": "assets/images/shuhrah-pour-femme.jpg",
+      "customImage": null
+  },
+  {
+      "id": 115,
+      "slug": "rasasi-shuhrah-opulence-pour-femme",
+      "nameEn": "Rasasi Shuhrah Opulence Pour Femme",
+      "nameAr": "شهرة أوبولينس للنساء",
+      "category": "rasasi",
+      "categoryNameEn": "Rasasi Collection",
+      "categoryNameAr": "قسم الرصاصي",
+      "price": 1650,
+      "volume": "90ml / 3.0 fl oz",
+      "scentFamily": "Rich Amber Floral & Sweet Citrus (عنبر زهري ملكي وفواكه مشرقة)",
+      "topNotes": "Peach, Mandarin, Fresh Citrus",
+      "heartNotes": "Orange Blossom, Sambac Jasmine, Damask Rose",
+      "baseNotes": "Madagascar Vanilla, Sandalwood, Warm Amber, White Musk",
+      "shape": "gold",
+      "badge": "Opulence VIP",
+      "themeColor": "#E67E22",
+      "rating": 5.0,
+      "reviewsCount": 58,
+      "inStock": true,
+      "stockCount": 40,
+      "image": "assets/images/shuhrah-opulence-pour-femme.jpg",
+      "customImage": null
+  },
+  {
+      "id": 116,
+      "slug": "rasasi-shuhrah-avenoir-pour-homme",
+      "nameEn": "Rasasi Shuhrah Avenoir Pour Homme",
+      "nameAr": "شهرة أفينوار للرجال",
+      "category": "rasasi",
+      "categoryNameEn": "Rasasi Collection",
+      "categoryNameAr": "قسم الرصاصي",
+      "price": 1650,
+      "volume": "90ml / 3.0 fl oz",
+      "scentFamily": "Dark Amber, Spices & Crimson Leather (عنبر داكن وتوابل دافئة وجلود فاخرة)",
+      "topNotes": "Pink Pepper, Cardamom, Italian Bergamot",
+      "heartNotes": "Smoky Leather, Ceylon Cinnamon, Nutmeg",
+      "baseNotes": "Precious Woods, Tonka Bean, Dark Amber, Vetiver",
+      "shape": "black",
+      "badge": "Intense VIP",
+      "themeColor": "#722F37",
+      "rating": 5.0,
+      "reviewsCount": 64,
+      "inStock": true,
+      "stockCount": 45,
+      "image": "assets/images/shuhrah-avenoir-pour-homme.jpg",
       "customImage": null
   },
 
